@@ -2,3 +2,77 @@ html {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
     line-height: 1.5; /* 2 */
 }
+
+body {
+    margin: 0;
+    font-family:system-ui,
+    -apple-system, /* Firefox supports this but not yet `system-ui` */
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+    font-family: inherit;
+    line-height: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.menubg{
+    background-color: #1f2937;
+}
+
+.menublockpos{
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+.menublockdiv{
+    display: flex;
+    align-items: baseline;
+    margin-left: 0.25rem;
+}
+
+.menublockAcceuil{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: white;
+    background-color: #111827;
+}
+
+.menublock{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: #d1d5db;
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.menublock:hover{
+    color: white;
+    background-color: #374151;
+}
+
+.menubrand{
+
+}
