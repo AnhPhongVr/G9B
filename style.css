@@ -23,24 +23,24 @@ a {
     text-decoration: inherit;
 }
 
-.menubg{
+.navbarbg{
     background-color: #1f2937;
 }
 
-.menublockpos{
+.navbarblockpos{
     display: flex;
     place-items: center;
     justify-content: space-between;
     height: 4rem;
 }
 
-.menublockdiv{
+.navbarblockdiv{
     display: flex;
     align-items: baseline;
     margin-left: 0.25rem;
 }
 
-.menublockAcceuil{
+.navbarblockAcceuil{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     padding-top: 0.5rem;
@@ -53,7 +53,7 @@ a {
     background-color: #111827;
 }
 
-.menublock{
+.navbarblock{
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     padding-top: 0.5rem;
