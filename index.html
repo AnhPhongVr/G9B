@@ -47,9 +47,9 @@
         <form class="contenuClasse">
             <h1 class="titre">Inscription</h1>
             <label for="prénom" class="prénom">Prénom :</label>
-            <input type="text" name="prénom" class="prénom2" placeholder="Entrez votre prénom" required autofocus>
+            <input type="text" name="prénom" class="prénom2" placeholder="Veuillez entrer votre prénom" required autofocus>
             <label for="nom" class="nom">Nom :</label>
-            <input type="text" name="nom" class="nom2" placeholder="Entrez votre nom" required><br>
+            <input type="text" name="nom" class="nom2" placeholder="Veuillez entrer votre nom" required><br>
             <label for="type" class="type">Type d'utilisateur :</label>
             <select name="type" id="type" class="select">
                 <option value="médecin">Médecin</option>
@@ -58,11 +58,13 @@
                 <option value="autre">Autre</option>
             </select><br>
             <label for="adresse mail" class="email">Adresse mail :</label>
-            <input type="email" class="email2" placeholder="Entrez votre adresse" required />
+            <input type="email" class="email2" placeholder="Veuillez entrer votre adresse" required />
             <label for="texte" class="date">Date de naissance :</label>
             <input type="date" class="date2"/><br>
             <label for="password" class="password">Mot de passe:</label>
-            <input type="password" name="password" class="password2" placeholder="Entrez votre mot de passe" required><br>
+            <input type="password" name="password" class="password2" placeholder="Veuillez entrer votre mot de passe"required>
+            <label for="confirmation" class="confirmation"></label>
+            <input type="password" name="confirmation" class="confirmation2" placeholder="Veuillez confirmer votre mot de passe" required><br>
             <br>
             <button type="submit" class="inscrire">S'inscrire</button>
         </form>

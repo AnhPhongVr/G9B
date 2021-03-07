@@ -212,7 +212,8 @@ a {
     border-radius: 10px;
 }
 
-.prénom2, .nom2, .email2, .password2{
+/*Style pour l'espace à remplir*/
+.prénom2, .nom2, .email2, .password2, .confirmation2{
     background-color: #f1f1f1;
     width: 100%;
     padding: 12px 20px;
@@ -221,6 +222,8 @@ a {
     box-sizing: border-box;
 }
 
+
+/*Style pour l'espace à remplir*/
 .select, .date2{
     width: 100%;
     padding: 12px 20px;
@@ -230,10 +233,12 @@ a {
     box-sizing: border-box;
 }
 
+/*Mettre un trait sous "Inscription" du popup*/
 .titre{
     border-bottom: solid;
 }
 
+/*Mettre les intitulés des chamso en gras*/
 .prénom, .nom, .type, .email, .date, .password{
     font-weight: bold;
 }

@@ -49,3 +49,15 @@ window.onclick = function(event) {
         popI.style.display = "none";
     }
 }
+
+//Ajout d'un message lorsque le mot de passe et sa confirmation correspondent/ne correspondent pas
+/*var check = function() {
+  if (document.getElementById("password").value ==
+    document.getElementById("confirmation").value) {
+    document.getElementById("message").style.color = "green";
+    document.getElementById("message").innerHTML = "Correspond";
+  } else {
+    document.getElementById("message").style.color = "red";
+    document.getElementById("message").innerHTML = "Ne correspond pas";
+  }
+}*/
