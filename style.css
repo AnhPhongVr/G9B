@@ -242,3 +242,8 @@ a {
 .prénom, .nom, .type, .email, .date, .password{
     font-weight: bold;
 }
+.LogoHome{
+    position: absolute;
+    right: 16em;
+    top: 0.9em;
+}

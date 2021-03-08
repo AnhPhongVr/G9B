@@ -44,7 +44,7 @@ span.onclick = function() {
 }
 
 // When the user clicks anywhere outside of the PopI, close it
-window.onclick = function(event) {
+window.onclick = function() {
     if (event.target == popI) {
         popI.style.display = "none";
     }
@@ -60,4 +60,12 @@ window.onclick = function(event) {
     document.getElementById("message").style.color = "red";
     document.getElementById("message").innerHTML = "Ne correspond pas";
   }
-}*/
+*/
+
+function redirection(){
+    document.location.href = "FAQ.html";
+}
+
+function Home(){
+    document.location.href = "index.html";
+}
