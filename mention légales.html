@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>G9Bwebpage</title>
+</head>
+<body>
+<!-- bar de navigation -->
+<!-- les # c'est pour les liens/class correspondante là pour l'instant il y a rien --!>
+<nav class="navbarbg">
+    <div class="navbarblockpos">
+        <div class="navbarblockdiv">
+            <a href="index.html" class="navbarbrand"><img src="logo%20client%20détouré.png" height="40px"></a>
+            <a href="index.html" class="navbarblockAcceuil">Acceuil</a>
+            <a href="#" class="navbarblock">A propos</a>
+            <a href="#" class="navbarblock">Nous contacter</a>
+            <a href="FAQ.html" class="navbarblock">FAQ</a>
+        </div>
+        <div class="navbarblocklog">
+            <button id="Inscription" class="navbarblock">Inscription</button>
+            <button id="myBtn" class="navbarblock">Connexion</button>
+        </div>
+    </div>
+</nav>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="form-container">
+            <h1 class="titre" >Connexion</h1>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Entrez votre email" name="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Entrez votre mot de passe" name="psw" required>
+            <button type="submit" class="btn">Connexion</button>
+        </form>
+    </div>
+
+</div>
+
+<!-- Popup -->
+<div id="Popup" class="popI">
+    <div class="contenu">
+        <span class="btnClose">&times;</span>
+        <form class="contenuClasse">
+            <h1 class="titre">Inscription</h1>
+            <label for="prénom" class="prénom">Prénom :</label>
+            <input type="text" name="prénom" class="prénom2" placeholder="Veuillez entrer votre prénom" required autofocus>
+            <label for="nom" class="nom">Nom :</label>
+            <input type="text" name="nom" class="nom2" placeholder="Veuillez entrer votre nom" required><br>
+            <label for="type" class="type">Type d'utilisateur :</label>
+            <select name="type" id="type" class="select">
+                <option value="médecin">Médecin</option>
+                <option value="patient">Patient</option>
+                <option value="chirurgien">Chirurgien</option>
+                <option value="autre">Autre</option>
+            </select><br>
+            <label for="adresse mail" class="email">Adresse mail :</label>
+            <input type="email" class="email2" placeholder="Veuillez entrer votre adresse" required />
+            <label for="texte" class="date">Date de naissance :</label>
+            <input type="date" class="date2"/><br>
+            <label for="password" class="password">Mot de passe:</label>
+            <input type="password" name="password" class="password2" placeholder="Veuillez entrer votre mot de passe"required>
+            <label for="confirmation" class="confirmation"></label>
+            <input type="password" name="confirmation" class="confirmation2" placeholder="Veuillez confirmer votre mot de passe" required><br>
+            <br>
+            <button type="submit" class="inscrire">S'inscrire</button>
+        </form>
+        </form>
+    </div>
+</div>
+<h1>Bienvenue sur notre site!</h1>
+<p>aehlflmgsmjlg</p>
+<footer>conditions générales d'utilisation</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
