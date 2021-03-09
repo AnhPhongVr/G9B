@@ -61,11 +61,3 @@ window.onclick = function() {
     document.getElementById("message").innerHTML = "Ne correspond pas";
   }
 */
-
-function redirection(){
-    document.location.href = "FAQ.html";
-}
-
-function Home(){
-    document.location.href = "index.html";
-}

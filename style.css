@@ -36,7 +36,7 @@ a {
 
 .navbarblockdiv{
     display: flex;
-    align-items: baseline;
+    align-items: center;
     margin-left: 0.25rem;
 }
 
@@ -76,6 +76,20 @@ a {
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.navbarbrand{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    background-color: #1f2937;
+    border: none;
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+}
+
 
 .navbarblock:hover{
     color: white;
