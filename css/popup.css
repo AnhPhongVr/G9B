@@ -41,7 +41,7 @@
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text], .form-container input[type=password]{
     background-color: #f1f1f1;
     width: 100%;
     padding: 12px 20px;
@@ -51,7 +51,7 @@
 }
 
 /* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus, .form-container input[type=password]:focus{
     background-color: #ddd;
     outline: none;
 }
@@ -75,70 +75,6 @@
     background-color: #374151;
 }
 
-.popI{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.contenu{
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button for inscription window*/
-.btnClose {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.btnClose:hover,
-.btnClose:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.form-container {
-    padding: 10px;
-}
-
-/* Set a style for the submit button */
-.inscrire{
-    background-color: #1f2937;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
-    border-radius: 10px;
-}
-
-/*Style pour l'espace à remplir*/
-.prenom2, .nom2, .email2, .password2, .confirmation2{
-    background-color: #f1f1f1;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-
 /*Style pour l'espace à remplir*/
 .select, .date2{
     width: 100%;
@@ -152,9 +88,4 @@
 /*Mettre un trait sous "Inscription" du popup*/
 .titre{
     border-bottom: solid;
-}
-
-/*Mettre les intitulés des chamso en gras*/
-.prenom, .nom, .type, .email, .date, .password{
-    font-weight: bold;
 }
