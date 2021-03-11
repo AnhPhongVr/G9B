@@ -16,15 +16,19 @@ body {
     'Segoe UI Emoji';
     font-family: inherit;
     line-height: inherit;
+    background-color: #EEEEEE;
 }
 
 /*FAQ*/
 .logoWitsmed{
     width: 50px;
     height: 50px;
-    position: relative;
+    position: sticky;
     left: 0;
-    bottom: 0;
+}
+
+.Nous{
+    margin-top: 100px;
 }
 
 .Powered{
@@ -37,29 +41,39 @@ body {
 .question{
     border: solid;
     border-radius: 10px;
-    width: 35%;
+    width: 80%;
     padding: 12px 20px;
     border-radius: 10px;
     margin-left: 20px;
-    background-color: #DBDBDB;
+    background-color: #AAC9E1;
+    border-color: black;
 }
 
 .reponse{
     border: solid;
     border-radius: 10px;
-    width: 35%;
+    width: 80%;
     padding: 12px 20px;
     border-radius: 10px;
     margin-left: 20px;
     margin-bottom: 50px;
-    background-color: #EBF5FF;
+    background-color: #D2E8F8;
 }
 
 .client{
-    width:300px;
-    height:300px;
+    width:400px;
+    height:400px;
     position: absolute;
-    right: 13em;
+    right: 15em;
     top: 10em;
+    display: none;
+}
+
+@media screen and (min-device-width:780px) and (min-width: 780px){
+	.client{display: flex;}
+}
+
+@media screen and (min-device-width:780px) and (min-width: 780px){
+	.question, .reponse{width: 35%;}
 }
 /*FAQ*/
