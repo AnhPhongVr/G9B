@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
-    <title>G9Bwebpage</title>
+	<meta charset="UTF-8">
+    <link href="/G9B/css/style.css" rel="stylesheet">
+    <link href="/G9B/css/navbar.css" rel="stylesheet">
+    <link href="/G9B/css/popup.css" rel="stylesheet">
+	<title>FAQ</title>
 </head>
 <body>
-<!-- bar de navigation -->
-<!-- les # c'est pour les liens/class correspondante là pour l'instant il y a rien -->
-<nav class="navbarbg">
-    <div class="navbarblockpos">
-        <div class="navbarblockdiv">
-            <a href="index.html" class="navbarbrand"><img src="logo%20client%20détouré.png" height="40px"></a>
-            <a href="index.html" class="navbarblockAcceuil">Acceuil</a>
-            <a href="#" class="navbarblock">A propos</a>
-            <a href="#" class="navbarblock">Nous contacter</a>
-            <a href="FAQ.html" class="navbarblock">FAQ</a>
-        </div>
-        <div class="navbarblocklog">
-            <button id="Inscription" class="navbarblock">Inscription</button>
-            <button id="myBtn" class="navbarblock">Connexion</button>
-        </div>
-    </div>
-</nav>
+    <nav class="navbarbg">
+		<div class="navbarblockpos">
+        	<div class="navbarblockdiv">
+                <a href="index.html" class="navbarbrand"><img src="/G9B/images/logo%20client%20détouré.png" height="40px"></a>
+                <a href="index.html" class="navbarblockAcceuil">Acceuil</a>
+            	<a href="#" class="navbarblock">A propos</a>
+            	<a href="#" class="navbarblock">Nous contacter</a>
+            	<a href="FAQ.html" class="navbarblock">FAQ</a>
+        	</div>
+        	<div class="navbarblocklog">
+            	<button id="Inscription" class="navbarblock">Inscription</button>
+            	<button id="myBtn" class="navbarblock">Connexion</button>
+        	</div>
+    	</div>
+    </nav>
 
-<!-- The Modal -->
 <div id="myModal" class="modal">
-
-    <!-- Modal content -->
+    <!-- popup connexion -->
     <div class="modal-content">
         <span class="close">&times;</span>
         <form class="form-container">
@@ -39,17 +37,16 @@
             <button type="submit" class="btn">Connexion</button>
         </form>
     </div>
-
 </div>
 
-<!-- Popup -->
+<!-- Popup inscription -->
 <div id="Popup" class="popI">
     <div class="contenu">
         <span class="btnClose">&times;</span>
         <form class="contenuClasse">
             <h1 class="titre">Inscription</h1>
-            <label for="prénom" class="prénom">Prénom :</label>
-            <input type="text" name="prénom" class="prénom2" placeholder="Veuillez entrer votre prénom" required autofocus>
+            <label for="prénom" class="prenom">Prénom :</label>
+            <input type="text" name="prénom" class="prenom2" placeholder="Veuillez entrer votre prénom" required autofocus>
             <label for="nom" class="nom">Nom :</label>
             <input type="text" name="nom" class="nom2" placeholder="Veuillez entrer votre nom" required><br>
             <label for="type" class="type">Type d'utilisateur :</label>
@@ -73,12 +70,24 @@
         </form>
     </div>
 </div>
-<h1>Bienvenue sur notre site!</h1>
-<p>aehlflmgsmjlg</p>
-<footer>conditions générales d'utilisation</footer>
 
-<script src="script.js"></script>
+<div>
+    <p class="question">Que faire si vous avez oublié votre mot de passe et votre mail?</p>
+    <p class="reponse">Dans ce cas, n'hésitez pas à nous contacter, il y a en bas de la page une rubrique "nous contacter".</p>
+    <p class="question">Sommes-nous obligés de faire toutes les séries de tests?</p>
+    <p class="reponse">Non vous n'êtes pas obligés de faire tous les tests proposés. Il est possible de chosir uniquement le ou les tests que vous voulez faire.</p>
+    <p class="question">Question 3</p>
+    <p class="reponse">Réponse 3</p>
+    <img src="/G9B/images/logo%20client%20détouré.png" class="client" alt="logo client">
+</div>
+
+
+
+<div>
+    <p class="Powered">Powered by</p>
+    <img src="/G9B/images/logo détouré.png" class="logoWitsmed" alt="logoWitsmed">
+</div>
+
+    <script src="/G9B/js/popup.js"></script>
 </body>
 </html>
-
-
