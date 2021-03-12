@@ -20,22 +20,21 @@ body {
 }
 
 /*FAQ*/
+
 .logoWitsmed{
     width: 50px;
     height: 50px;
     position: sticky;
     left: 0;
-}
-
-.Nous{
-    margin-top: 100px;
+    bottom: 0;
 }
 
 .Powered{
-    position: relative;
+    position: sticky;
     top: 2em;
     left: 0;
     font-size: 10px;
+    color: white;
 }
 
 .question{
@@ -76,4 +75,60 @@ body {
 @media screen and (min-device-width:780px) and (min-width: 780px){
 	.question, .reponse{width: 35%;}
 }
+
+.pied{
+    background: #eaeae6;
+    border-top: 1px solid #d5d4d1;
+    box-sizing: border-box;
+    height: 96px;
+    padding: 24px 0;
+    text-align: left;
+}
+
+.appeler{
+    border: solid;
+    border-color: grey;
+    border-width: 3px;
+    background-color: #EEEEEE;
+    width: 35%;
+    margin-left: 100px;
+    font-size: 20px;
+    padding: 8px 5px;
+}
+
+.envoyer{
+    border: solid;
+    border-color: grey;
+    border-width: 3px;
+    background-color: #EEEEEE;
+    width: 35%;
+    margin-left: 20px;
+    font-size: 20px;
+    padding: 8px 5px;
+}
+
+.contact{
+    font-size: 25px;
+    font-style: bold;
+    margin-left: 15em;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #1f2937;
+}
+
+li{
+    float: right;
+}
+
+.footer-container{
+    padding: 18px;
+    color: white;
+}
+
 /*FAQ*/
