@@ -61,3 +61,25 @@ window.onclick = function(event) {
     document.getElementById("message").innerHTML = "Ne correspond pas";
   }
 */
+
+//Afficher le mot de passe
+
+function Afficher(){ 
+    var input = document.getElementById("password"); 
+    if (input.type === "password"){ 
+        input.type = "text"; 
+    } else{
+            input.type = "password"; 
+    } 
+} 
+
+//Afficher le mot de passe pour la confirmation
+
+function AfficherConfirmation(){ 
+    var input = document.getElementById("confirmation"); 
+    if (input.type === "password"){ 
+        input.type = "text"; 
+    } else{
+            input.type = "password"; 
+    } 
+} 

@@ -89,3 +89,22 @@
 .titre{
     border-bottom: solid;
 }
+
+/*Afficher le mot de passe*/
+
+/*.loupe{
+    float: right;
+    width: 20px;
+    height: 20px;
+}*/
+
+.btnAfficher{
+    background-color: #f1f1f1;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+}
