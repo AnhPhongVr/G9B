@@ -96,3 +96,14 @@ function robustesse() {
             strength.innerHTML = '<span style="color:red">Weak!</span>';
         }
 }
+
+function check(){
+    if (document.getElementById("password").value ==
+        document.getElementById("confirmation").value) {
+        document.getElementById("message").style.color = "green";
+        document.getElementById("message").innerHTML = "Les mots de passe correspondent";
+    } else{
+        document.getElementById("message").style.color = "red";
+        document.getElementById("message").innerHTML = "Les mots de passe ne correspondent pas";
+    }
+}

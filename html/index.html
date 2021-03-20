@@ -66,12 +66,13 @@
             <label for="texte"><b>Date de naissance :</b></label>
             <input type="date" class="date2"/>
             <label for="password"><b>Mot de passe :</b></label>
-            <input type="password" name="password" class="password2" id="password" size="15" maxlength="100" onkeyup="return robustesse();" placeholder="Veuillez entrer votre mot de passe"required>
+            <input type="password" name="password" class="password2" id="password" size="15" maxlength="100" onkeyup="return robustesse();" onkeyup="check()" placeholder="Veuillez entrer votre mot de passe"required>
             <span id="force"></span><br>
             <input type="checkbox" onclick="Afficher()" name="afficher">Afficher le mot de passe<br>
             <label for="confirmation"><b>Confirmation :</b></label>
             <?php include('form.php'); ?>
-            <input type="password" name="confirmation" id="confirmation"placeholder="Veuillez confirmer votre mot de passe" required>
+            <input type="password" name="confirmation" id="confirmation" onkeyup="check()" placeholder="Veuillez confirmer votre mot de passe" required>
+            <span id="message"></span><br>
             <input type="checkbox" onclick="AfficherConfirmation()" name="afficher">Afficher le mot de passe<br>
             <br>
             <button type="submit" class="btn">S'inscrire</button>
