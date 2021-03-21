@@ -3,6 +3,14 @@ html {
     line-height: 1.5; /* 2 */
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family:system-ui,
@@ -16,7 +24,9 @@ body {
     'Segoe UI Emoji';
     font-family: inherit;
     line-height: inherit;
-    background-color: #EEEEEE;
+    /* background-color: #EEEEEE; */
+    display: flex;
+    flex-direction: column;
 }
 
 /*FAQ*/
@@ -132,3 +142,129 @@ li{
 }
 
 /*FAQ*/
+
+/*titre*/
+
+#titre
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    /*background: black;*/
+    background-image: url("../images/background.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+#titre h2
+{
+    position: relative;
+    margin-left: 30px;
+    font-size: 50px ;
+    color: cornflowerblue;
+    -webkit-text-stroke: 0.3vw cornflowerblue;
+    text-transform: uppercase;
+    font-family: Verdana;
+
+}
+
+#titre h2::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: grey;
+    -webkit-text-stroke: 0.3vw grey;
+    border-right: 2px solid grey;
+    overflow: hidden;
+    animation: animate 6s linear ;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        width: 0;
+    }
+    70%
+    {
+        width: 100%;
+    }
+}
+
+/*titre*/
+
+.milieuImg{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 300;
+    flex-direction: row;
+    padding: 5% 5% 8% 5%;
+}
+
+.milieuImg img {
+    position: relative;
+    padding-right: 50px;
+    height: 400px;
+    width: 400px;
+
+}
+
+.texteDroite{
+    font-size: 2vw;
+}
+
+#milieu{
+    background-color: #c6cdda;
+    text-align: center;
+    font-weight: 300;
+    display: inline-block;
+    padding: 5% 5% 8% 5%;
+    font-size: 2vw;
+}
+
+.icones{
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.milieuGauche, .milieuCentre, .milieuDroite {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.icones ion-icon {
+    font-size: 5vw;
+}
+
+.hydrated {
+    visibility: inherit;
+}
+
+:host {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    contain: strict;
+    fill: currentcolor;
+    box-sizing: content-box !important;
+}
+
+.icones ion-icon:hover {
+    -ms-transform: scale(1.5,1.5); /* pour IE 9 */
+    -webkit-transform: scale(1.5,1.5); /* pour Safari < 9.0 */
+    transform: scale(1.5,1.5); /* Syntaxe normale */
+    transition: transform 1s;
+}
