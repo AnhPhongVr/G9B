@@ -164,9 +164,9 @@ li{
 #titre h2
 {
     position: relative;
-    margin-left: 30px;
+    margin-right: 30px ;
     font-size: 50px ;
-    color: cornflowerblue;
+    color: #6495ed;
     -webkit-text-stroke: 0.3vw cornflowerblue;
     text-transform: uppercase;
     font-family: Verdana;
@@ -209,6 +209,7 @@ li{
     font-weight: 300;
     flex-direction: row;
     padding: 5% 5% 8% 5%;
+    height: 100%;
 }
 
 .milieuImg img {
