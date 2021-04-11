@@ -48,79 +48,67 @@ body {
 }
 
 .question{
-    border: solid;
-    border-radius: 10px;
-    width: 80%;
+    border: solid black;
     padding: 12px 20px;
     border-radius: 10px;
-    margin-left: 20px;
     background-color: #AAC9E1;
-    border-color: black;
 }
 
 .reponse{
     border: solid;
-    border-radius: 10px;
-    width: 80%;
     padding: 12px 20px;
     border-radius: 10px;
-    margin-left: 20px;
-    margin-bottom: 50px;
     background-color: #D2E8F8;
+
 }
 
-.client{
+/*.client{
     width:400px;
     height:400px;
     position: absolute;
     right: 15em;
     top: 10em;
-    display: none;
-}
+}*/
 
-@media screen and (min-device-width:780px) and (min-width: 780px){
+/*@media screen and (min-device-width:780px) and (min-width: 780px){
 	.client{display: flex;}
 }
 
 @media screen and (min-device-width:780px) and (min-width: 780px){
 	.question, .reponse{width: 35%;}
-}
+}*/
+
+/*style pour le pied de page*/
 
 .pied{
-    background: #eaeae6;
+    background-color: #eaeae6;
     border-top: 1px solid #d5d4d1;
-    box-sizing: border-box;
-    height: 96px;
-    padding: 24px 0;
-    text-align: left;
+    height: 300px;
+    padding: 50px;
+    text-align: center;
 }
 
 .appeler{
-    border: solid;
-    border-color: grey;
-    border-width: 3px;
+    border: solid grey 3px;
     background-color: #EEEEEE;
     width: 35%;
-    margin-left: 100px;
-    font-size: 20px;
-    padding: 8px 5px;
+    padding: 10px 8px;
+    font-size: 25px;
+    margin-right: 30px;
 }
 
 .envoyer{
-    border: solid;
-    border-color: grey;
-    border-width: 3px;
+    border: solid grey 3px;
     background-color: #EEEEEE;
     width: 35%;
-    margin-left: 20px;
-    font-size: 20px;
-    padding: 8px 5px;
+    padding: 10px 8px;
+    font-size: 25px;
+    margin-left: 30px;
 }
 
 .contact{
-    font-size: 25px;
-    font-style: bold;
-    margin-left: 15em;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 
