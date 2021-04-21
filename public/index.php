@@ -8,13 +8,15 @@
     <title>G9Bwebpage</title>
 </head>
 <body>
-<?php
-    require 'navbar.php';
-    require '../membres/inscription.php';
-    require '../membres/connexion.php';
-?>
+    <!-- navbar -->
+    <?php include("navbar.php"); ?>
+    <!-- popup connexion -->
+    <?php include("../membres/connexion.php") ?>
+    <!-- popup inscription -->
+    <?php include("../membres/inscription.php") ?>
 
-<!-- titre -->
+    <!-- titre -->
+
     <div id="titre">
         <h2 data-text = "Infinite"> Infinite </h2>
         <h2 data-text = "Measures"> Measures </h2>

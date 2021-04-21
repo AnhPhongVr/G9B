@@ -62,7 +62,6 @@ if(isset($_POST['forminscription']))
 }
 
 ?>
-
 <!-- Popup -->
 <div id="Popup" class="modal">
     <div class="modal-content">
@@ -98,4 +97,3 @@ if(isset($_POST['forminscription']))
         </form>
     </div>
 </div>
-

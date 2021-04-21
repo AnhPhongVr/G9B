@@ -8,11 +8,12 @@
 	<title>FAQ</title>
 </head>
 <body>
-<?php
-    require 'navbar.php';
-    require '../membres/inscription.php';
-    require '../membres/connexion.php';
-?>
+    <!-- navbar -->
+    <?php include("navbar.php"); ?>
+    <!-- popup connexion -->
+    <?php include("../membres/connexion.php") ?>
+    <!-- popup inscription -->
+    <?php include("../membres/inscription.php") ?>
 <!--La contenu de la FAQ-->
 <div class="faq">
 
