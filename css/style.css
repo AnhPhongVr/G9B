@@ -31,6 +31,8 @@ body {
 
 /*FAQ*/
 
+/*style pour le logo Witsmed*/
+
 .logoWitsmed{
     width: 50px;
     height: 50px;
@@ -39,6 +41,7 @@ body {
     bottom: 0;
 }
 
+/*style pour l'intitulé "powered by"*/
 .Powered{
     position: sticky;
     top: 2em;
@@ -47,28 +50,63 @@ body {
     color: white;
 }
 
+/*style pour les questions*/
 .question{
     border: solid black;
     padding: 12px 20px;
     border-radius: 10px;
     background-color: #AAC9E1;
+    margin-left: 20px;
+    margin-bottom: 21px;
+    width: 100%;
 }
 
-.reponse{
+/*style pour les réponses*/
+.r1, .r2, .r3, .r4, .r5, .r6{
     border: solid;
     padding: 12px 20px;
     border-radius: 10px;
     background-color: #D2E8F8;
-
+    margin-left: 100px;
+    width: 80%;
 }
 
-/*.client{
+/*disparition des questions*/
+.r1, .r2, .r3, .r4, .r5, .r6{
+    display: none;
+}
+
+/*mise des questions et des réponses côte à côte*/
+.faq{
+    display: flex;
+}
+
+/*style pour le logo de notre client*/
+.logoClient{
     width:400px;
     height:400px;
     position: absolute;
     right: 15em;
     top: 10em;
-}*/
+}
+
+/*style pour les boutons "afficher les réponses"*/
+button {
+    border-radius: 10px;
+    background-color: #1f2937;
+    color: white;
+}
+
+/*style pour les titres "Questions" et "Réponses*/
+h3{
+    font-family: Verdana;
+    text-align: center;
+}
+
+.ContenuReponse h3{
+    display: none;
+    text-align: center;
+}
 
 /*@media screen and (min-device-width:780px) and (min-width: 780px){
 	.client{display: flex;}
@@ -78,8 +116,9 @@ body {
 	.question, .reponse{width: 35%;}
 }*/
 
-/*style pour le pied de page*/
+/*style pour tout le bas de la page*/
 
+/*style pour le pied de page avec la partie "nous contacter"*/
 .pied{
     background-color: #eaeae6;
     border-top: 1px solid #d5d4d1;
@@ -87,7 +126,7 @@ body {
     padding: 50px;
     text-align: center;
 }
-
+/*style pour le bouton "appeler" du pied de page*/
 .appeler{
     border: solid grey 3px;
     background-color: #EEEEEE;
@@ -97,7 +136,8 @@ body {
     margin-right: 30px;
 }
 
-.envoyer{
+/*style pour le bouton "envoyer un e-mail" du pied de page*/
+.mail{
     border: solid grey 3px;
     background-color: #EEEEEE;
     width: 35%;
@@ -106,12 +146,13 @@ body {
     margin-left: 30px;
 }
 
+/*style pour le "nous contacter" du pied de page*/
 .contact{
     font-size: 30px;
     font-weight: bold;
 }
 
-
+/*style pour les mots du pied de page comme "mantions légales"*/
 ul {
     list-style-type: none;
     margin: 0;
@@ -124,6 +165,7 @@ li{
     float: right;
 }
 
+/*style pour le pied de page*/
 .footer-container{
     padding: 18px;
     color: white;
