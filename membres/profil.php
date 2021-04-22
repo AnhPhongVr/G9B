@@ -13,14 +13,15 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 ?>
 <html>
 <head>
-    <title>tuto espace membre</title>
+    <title>tespace membre</title>
     <meta charset="utf-8">
 </head>
 <body>
 <div align="center">
-    <h2>Profil de <?php echo $userinfo['pseudo']; ?></h2>
+    <h2>Profil de <?php echo $userinfo['prenom']; ?> <?php echo $userinfo['nom']; ?></h2>
     <br /><br />
-    <p> Pseudo = <?php echo $userinfo['pseudo']; ?> </p>
+    <p> Prenom = <?php echo $userinfo['prenom']; ?> </p>
+    <p> Nom = <?php echo $userinfo['nom']; ?> </p>
     <p> Mail = <?php echo $userinfo['mail']; ?> </p>
     <?php
     if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])

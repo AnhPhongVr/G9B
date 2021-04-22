@@ -25,7 +25,7 @@ if(isset($_POST['forminscription']))
                 {
                     if ($pwd == $conf)
                     {
-                        $insertmbr = $bdd->prepare("INSERT INTO membres(id, Prénom, Nom, Type, mail, datedenaissance, motdepasse) VALUES (NULL, ?, ?, NULL, ?, NULL, ?)");
+                        $insertmbr = $bdd->prepare("INSERT INTO membres(id, prenom, nom, usertype, mail, datedenaissance, motdepasse) VALUES (NULL, ?, ?, '', ?, NULL, ?)");
                         $insertmbr->execute(array($prénom, $nom, $mail, $pwd));
                         $erreur = "Votre compte a bien été crée ! <a href=\"connexion.php\">Me connecter</a>";
                     }
