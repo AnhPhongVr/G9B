@@ -4,55 +4,49 @@ $bdd = new PDO('mysql:host=127.0.0.1;dbname=espace_membre; charset=utf8', 'root'
 
 if(isset($_POST['forminscription']))
 {
-    $pseudo = htmlspecialchars($_POST['pseudo']);
+    $prénom = htmlspecialchars($_POST['prénom']);
+    $nom = htmlspecialchars($_POST['nom']);
     $mail = htmlspecialchars($_POST['mail']);
-    $mail2 = htmlspecialchars($_POST['mail2']);
-    $mdp = sha1($_POST['mdp']);
-    $mdp2 = sha1($_POST['mdp2']);
+    $pwd = sha1($_POST['password']);
+    $conf = sha1($_POST['confirmation']);
 
-    if(!empty($_POST['pseudo']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2']))
+    if(!empty($_POST['prénom']) AND !empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['password']) AND !empty($_POST['confirmation']))
     {
-        $pseudolength = strlen($pseudo);
-        if ($pseudolength <= 255)
+        $prénomlength = strlen($prénom);
+        $nomlength = strlen($nom);
+        if ($prénomlength <= 255 AND $nomlength <=255)
         {
-            if($mail == $mail2)
+            if(filter_var($mail, FILTER_VALIDATE_EMAIL))
             {
-                if(filter_var($mail, FILTER_VALIDATE_EMAIL))
+                $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
+                $reqmail->execute(array($mail));
+                $mailexist = $reqmail->rowCount();
+                if($mailexist == 0)
                 {
-                    $reqmail = $bdd->prepare("SELECT * FROM membres WHERE mail = ?");
-                    $reqmail->execute(array($mail));
-                    $mailexist = $reqmail->rowCount();
-                    if($mailexist == 0)
+                    if ($pwd == $conf)
                     {
-                        if ($mdp == $mdp2)
-                        {
-                            $insertmbr = $bdd->prepare("INSERT INTO membres(id, pseudo, mail, motdepasse) VALUES (NULL, :pseudo,:mail,:mdp)");
-                            $insertmbr->execute(array('pseudo' => $pseudo, 'mail' => $mail, 'mdp' => $mdp));
-                            $erreur = "Votre compte a bien été crée ! <a href=\"connexion.php\">Me connecter</a>";
-                        }
-                        else
-                        {
-                            $erreur = "Vos mots de passes ne correspondent pas !";
-                        }
+                        $insertmbr = $bdd->prepare("INSERT INTO membres(id, Prénom, Nom, Type, mail, datedenaissance, motdepasse) VALUES (NULL, ?, ?, NULL, ?, NULL, ?)");
+                        $insertmbr->execute(array($prénom, $nom, $mail, $pwd));
+                        $erreur = "Votre compte a bien été crée ! <a href=\"connexion.php\">Me connecter</a>";
                     }
                     else
                     {
-                        $erreur = "Adresse mail déjà utilisée !";
+                        $erreur = "Vos mots de passes ne correspondent pas !";
                     }
                 }
                 else
                 {
-                    $erreur = "Votre adresse mail n'est pas valide";
+                    $erreur = "Adresse mail déjà utilisée !";
                 }
             }
             else
             {
-                $erreur = "Vos addresses mail ne correspondent pas";
+                $erreur = "Votre adresse mail n'est pas valide";
             }
         }
         else
         {
-            $erreur = "Votre pseudo ne doit pas dépasser 255 caractères";
+            $erreur = "Votre nom ou prénom ne doit pas dépasser 255 caractères";
         }
     }
     else
@@ -66,23 +60,14 @@ if(isset($_POST['forminscription']))
 <div id="Popup" class="modal">
     <div class="modal-content">
         <span class="close btnClose">&times;</span>
-        <form method="POST" action="../membres/inscription.php" class="form-container">
+        <form method="POST" action="" class="form-container">
             <h1 class="titre">Inscription</h1>
-            <label for="prénom"><b>Prénom :</b></label>
-            <input type="text" id="prénom" name="prénom" placeholder="Veuillez entrer votre prénom" required >
+            <label for="prenom"><b>Prénom :</b></label>
+            <input type="text" id="prénom" name="prénom" placeholder="Veuillez entrer votre prénom" value="<?php if(isset($prenom)) {echo $prenom;} ?>" />
             <label for="nom"><b>Nom :</b></label>
-            <input type="text" name="nom" placeholder="Veuillez entrer votre nom" required>
-            <label for="type"><b>Type d'utilisateur :</b></label>
-            <select name="type" id="type" class="select">
-                <option value="médecin">Médecin</option>
-                <option value="patient">Patient</option>
-                <option value="chirurgien">Chirurgien</option>
-                <option value="autre">Autre</option>
-            </select>
+            <input type="text" id="nom" name="nom" placeholder="Veuillez entrer votre nom" value="<?php if(isset($nom)) {echo $nom;} ?>">
             <label for="adresse mail"><b>Adresse e-mail :</b></label>
-            <input type="text" placeholder="Veuillez entrer votre adresse e-mail" required>
-            <label for="texte"><b>Date de naissance :</b></label>
-            <input type="date" class="date2"/>
+            <input type="email" id="mail" name="mail" placeholder="Veuillez entrer votre adresse e-mail" value="<?php if(isset($mail)) {echo $mail;} ?>">
             <label for="password"><b>Mot de passe :</b></label>
             <input type="password" name="password" class="password2" id="password" size="15" maxlength="100" onkeyup="return robustesse();" onkeyup="check()" placeholder="Veuillez entrer votre mot de passe"required>
             <span id="force"></span><br>
@@ -92,8 +77,18 @@ if(isset($_POST['forminscription']))
             <span id="message"></span><br>
             <input type="checkbox" onclick="AfficherConfirmation()" name="afficher">Afficher le mot de passe<br>
             <br>
-            <button type="submit" class="btn">S'inscrire</button>
+            <input onclick="form_submit()" type="submit" class="btn" name="forminscription" value="Je m'inscris">
         </form>
-        </form>
+        <?php
+        if (isset($erreur))
+        {
+            echo '<span style="color: red; ">' . $erreur . '</span>';
+        }
+        ?>
     </div>
 </div>
+<script type="text/javascript">
+    function form_submit() {
+        document.getElementById("search_form").submit();
+    }
+</script>
