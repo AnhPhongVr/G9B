@@ -59,26 +59,11 @@
 </div>
 </div>
 
-<!--Bandeau avec la partie "nous conatcter"-->
-<div class="pied">
-	<span class="contact">Vous souhaitez nous contacter?</span><br>
-	<br>
-	<button class="appeler"><b>Nous appeler</b></button>
-	<button class="mail"><b>Envoyer un e-mail</b></button>
-</div>
+    <!-- nous contacter -->
+    <?php include ("contacter.php") ?>
 
-<!--Pied de page-->
-<div class="footer">
-    <footer>
-        <ul>
-        <p class="Powered">Powered by</p>
-        <img src="../images/Witsmed.png" class="logoWitsmed" alt="logoWitsmed">
-        <li><a href="" class="footer-container">Conditions d'utilsation</li></a>
-        <li><a href="" class="footer-container">Confidentialité</li></a>
-        <li><a href="" class="footer-container">Mentions légales</li></a>
-        </ul>
-    </footer>
-</div>
+    <!-- pied de page -->
+    <?php include("footer.php") ?>
 
     <script src="../js/popup.js"></script>
     <script src="../js/faq.js"></script>

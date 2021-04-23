@@ -1,3 +1,4 @@
+//Popup connexion----------------------------------------------------------------------------------------------------
 // Get the modal
 let modal = document.getElementById("myModal");
 
@@ -23,7 +24,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+//---------------------------------------------------------------------------------------------------------------------
 
+//Popup inscription----------------------------------------------------------------------------------------------------
 // Get the PopI
 let popI = document.getElementById("Popup");
 
@@ -49,7 +52,9 @@ window.onclick = function(event) {
         popI.style.display = "none";
     }
 }
+//----------------------------------------------------------------------------------------------------------------------
 
+//mdp input manipulation------------------------------------------------------------------------------------------------
 //Afficher le mot de passe
 
 function Afficher(){ 
@@ -107,3 +112,4 @@ function check(){
         document.getElementById("message").innerHTML = "Les mots de passe ne correspondent pas";
     }
 }
+//---------------------------------------------------------------------------------------------------------------------

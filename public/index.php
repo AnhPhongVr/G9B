@@ -53,24 +53,11 @@
         </div>
     </div>
 
-    <!--Bandeau avec la partie "nous conatcter"-->
-    <div id="contact" class="pied">
-        <p class="contact">Vous souhaitez nous contacter?</p>
-        <a href="" class="appeler">Nous appeler</a>
-        <a href="" class="envoyer">Envoyer un e-mail</a>
-    </div>
+    <!-- nous contacter -->
+    <?php include ("contacter.php") ?>
 
-    <!--Pied de page-->
-    <footer>
-            <ul>
-                <p class="Powered">Powered by</p>
-                <img src="../images/Witsmed.png" class="logoWitsmed" alt="logoWitsmed">
-                <li><a href="CGU.php" class="footer-container">Conditions d'utilsation</li></a>
-                <li><a href="" class="footer-container">Confidentialité</li></a>
-                <li><a href="mention légales.php" class="footer-container">Mentions légales</li></a>
-            </ul>
-    </footer>
-    
+    <!-- pied de page -->
+    <?php include("footer.php") ?>
 
 <script src="../js/popup.js"></script>
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

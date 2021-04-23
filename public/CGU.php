@@ -14,9 +14,9 @@
     <?php include("../membres/connexion.php") ?>
     <!-- popup inscription -->
     <?php include("../membres/inscription.php") ?>
-<h1>Bienvenue sur notre site!</h1>
-<p>aehlflmgsmjlg</p>
-<footer>conditions générales d'utilisation</footer>
+<br><br><br><br><br><br><br><br><br><br>
+    <!-- pied de page -->
+    <?php include("footer.php") ?>
 
 <script src="../js/popup.js"></script>
 </body>

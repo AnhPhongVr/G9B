@@ -13,7 +13,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 ?>
 <html>
 <head>
-    <title>tespace membre</title>
+    <title>espace membre</title>
     <meta charset="utf-8">
 </head>
 <body>
