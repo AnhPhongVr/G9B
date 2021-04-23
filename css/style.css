@@ -303,3 +303,6 @@ li{
 button:hover{
     cursor: pointer;
 }
+.accordon-header{
+     background-color:#f2f3f4 ;
+}
