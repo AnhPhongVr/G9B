@@ -107,3 +107,73 @@
     box-sizing: border-box;
     text-align: center;
 }
+
+/*popup pour l'envoi de mail*/
+
+/*style pour la croix dans le popup envoi de mail*/
+
+.fermer:hover,
+.fermer:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.fermer {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.prenom{
+    background-color: #f1f1f1;
+    width: 48%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.nom{
+    background-color: #f1f1f1;
+    width: 48%;
+    margin-left: 20px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.email, .objet{
+    background-color: #f1f1f1;
+    width: 98%;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* When the inputs get focus, do something */
+.contenuMail input[type=text]:focus, .contenuMail input[type=email]:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.contenuMail .btn {
+    background-color: #1f2937;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+/* Add some hover effects to buttons */
+.fcontenuMail .btn:hover {
+    color: white;
+    background-color: #374151;
+}

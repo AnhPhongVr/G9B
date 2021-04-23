@@ -113,3 +113,26 @@ function check(){
     }
 }
 //---------------------------------------------------------------------------------------------------------------------
+
+/*Popup pour l'envoi de mail*/
+
+// Get the modal
+let popupMail = document.getElementById("popupMail");
+
+// Get the button that opens the modal
+let btn3 = document.getElementById("mail");
+
+// Get the <span> element that closes the modal
+let span3 = document.getElementsByClassName("fermer")[0];
+
+// When the user clicks on the button, open the modal
+btn3.onclick = function() {
+    popupMail.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span3.onclick = function() {
+    popupMail.style.display = "none";
+}
+
+//------------------------------------------------------------------------------------------------------------------------
