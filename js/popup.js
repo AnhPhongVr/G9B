@@ -120,7 +120,7 @@ function check(){
 let popupMail = document.getElementById("popupMail");
 
 // Get the button that opens the modal
-let btn3 = document.getElementById("mail");
+let btn3 = document.getElementById("popmail");
 
 // Get the <span> element that closes the modal
 let span3 = document.getElementsByClassName("fermer")[0];
@@ -135,4 +135,10 @@ span3.onclick = function() {
     popupMail.style.display = "none";
 }
 
+// When the user clicks anywhere outside of the PopI, close it
+window.onclick = function(event) {
+    if (event.target === popupMail) {
+        popupMail.style.display = "none";
+    }
+}
 //------------------------------------------------------------------------------------------------------------------------

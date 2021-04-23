@@ -299,3 +299,7 @@ li{
     transform: scale(1.5,1.5); /* Syntaxe normale */
     transition: transform 1s;
 }
+
+button:hover{
+    cursor: pointer;
+}
