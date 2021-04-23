@@ -28,7 +28,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
     {
         ?>
         <a href="#">Editer mon profil</a>
-        <a href="deconnexion.php">Se déconnecter</a>
+        <a href="../deconnexion.php">Se déconnecter</a>
         <?php
     }
     ?>
