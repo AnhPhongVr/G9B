@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=espace_membre; charset=utf8', 'root', 'root');
+$bdd = new PDO('mysql:host=localhost;dbname=espace_membre; charset=utf8', 'root', 'root');
 
 if(isset($_SESSION['id']))
 {
@@ -60,15 +60,13 @@ if(isset($_SESSION['id']))
         <title>Profil</title>
         <meta charset="utf-8">
         <link href="../../css/style.css" rel="stylesheet">
-        <link href="../../css/navbar.css" rel="stylesheet">
-        <link href="../../css/popup.css" rel="stylesheet">
         <link href="../../css/profil.css" rel="stylesheet">
     </head>
     <body>
 
     <div class="main">
         <div class="contenu">
-            <img src="../../images/utilisateur.png" alt="logo utilisateur">
+            <img class="logoUtilisateur" src="../../images/utilisateur.png" alt="logo utilisateur">
                 <h2>Edition du profil</h2>
                 <form method="POST" action="">
                     <table>
@@ -121,7 +119,7 @@ if(isset($_SESSION['id']))
                             </td>
                         </tr>
                     </table>
-                    <input type="submit" value="Mettre à jour mon profil !"/>
+                    <input class="btn" type="submit" value="Mettre à jour mon profil !"/>
                 </form>
             <?php if(isset($msg)) { echo $msg; } ?>
         </div>

@@ -4,6 +4,7 @@
 	padding: 20px;	
 	text-align: center;
 }
+/*style pour la page du profil*/
 
 .menu{
 	display: flex;
@@ -45,4 +46,23 @@ img{
 
 .main{
 	display: flex;
+}
+
+.contenu a{
+	text-decoration: none;
+	color: black;
+}
+
+/*style pour la page édition du profil*/
+
+h2{
+	margin-left: 610px;
+}
+
+.logoUtilisateur{
+	margin-left: 540px; 
+}
+
+.btn{
+	margin-left: 620px;
 }
