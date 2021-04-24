@@ -48,40 +48,90 @@ if(isset($_SESSION['id']))
             $msg = "Vos deux mdp ne correspondent pas !";
         }
     }
+
+    if(isset($_POST['newnom']) AND $_POST['newnom'] == $user['nom'])
+    {
+        header('Location: profil.php?id='.$_SESSION['id']);
+    }
     ?>
-    <html>
+<!DOCTYPE html>
+<html lang="fr">
     <head>
-        <title>tuto espace membre</title>
+        <title>Profil</title>
         <meta charset="utf-8">
+        <link href="../../css/style.css" rel="stylesheet">
+        <link href="../../css/navbar.css" rel="stylesheet">
+        <link href="../../css/popup.css" rel="stylesheet">
+        <link href="../../css/profil.css" rel="stylesheet">
     </head>
     <body>
-    <div align="center">
-        <h2>Edition de mon profil</h2>
-        <div align="left">
-            <form method="POST" action="">
-                <label>Prenom :</label>
-                <input type="text" name="newprenom" placeholder="Prenom" value="<?php echo $user['prenom']?>"/> <br /> <br/>
-                <label>Nom :</label>
-                <input type="text" name="newnom" placeholder="Nom" value="<?php echo $user['nom']?>"> <br /> <br />
-                <label>Mail :</label>
-                <input type="text" name="newmail" placeholder="Mail" value="<?php echo $user['mail']?>"/> <br /> <br/>
-                <label>Date de naissance :</label>
-                <input type="date" name="newdate"/> <br /> <br />
-                <label>Mot de passe :</label>
-                <input type="password" name="newmdp1" placeholder="nouveau mot de passe" /> <br /> <br/>
-                <label>Confiramtion - mot de passe :</label>
-                <input type="password" name="newmdp2" placeholder="confirmation mot de passe" /> <br /> <br/>
-                <input type="submit" value="Mettre à jour mon profil !"/>
-            </form>
+
+    <div class="main">
+        <div class="contenu">
+            <img src="../../images/utilisateur.png" alt="logo utilisateur">
+                <h2>Edition du profil</h2>
+                <form method="POST" action="">
+                    <table>
+                        <tr>
+                            <td>
+                                <label>Nom :</label>
+                            </td>
+                            <td>
+                                <input type="text" name="newnom" placeholder="Nom" value="<?php echo $user['nom']?>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Prénom :</label>
+                            </td>
+                            <td>
+                                <input type="text" name="newprenom" placeholder="Prenom" value="<?php echo $user['prenom']?>"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Adresse email :</label>
+                            </td>
+                            <td>
+                                <input type="text" name="newmail" placeholder="Mail" value="<?php echo $user['mail']?>"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Date de naissance :</label>
+                            </td>
+                            <td>
+                                <input type="date" name="newdate"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Mot de passe :</label>
+                            </td>
+                            <td>
+                                <input type="password" name="newmdp1" placeholder="nouveau mot de passe" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Confirmation du mot de passe :</label>
+                            </td>
+                            <td>
+                                <input type="password" name="newmdp2" placeholder="confirmation mot de passe" />
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="Mettre à jour mon profil !"/>
+                </form>
             <?php if(isset($msg)) { echo $msg; } ?>
         </div>
     </div>
     </body>
-    </html>
-    <?php
+</html>
+<?php
 }
 else
 {
-    header("Location : connexion.php");
+    header("Location : ../../public/index.php");
 }
 ?>
