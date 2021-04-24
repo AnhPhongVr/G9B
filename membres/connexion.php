@@ -33,7 +33,7 @@ if(isset($_POST['formconnexion']))
 
 ?>
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal" style="overflow: hidden;">
 
     <!-- Modal content -->
     <div class="modal-content">

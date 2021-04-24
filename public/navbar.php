@@ -1,6 +1,6 @@
 <!-- bar de navigation -->
 <!-- les # c'est pour les liens/class correspondante là pour l'instant il y a rien -->
-<nav class="navbarbg">
+<nav class="navbarbg sticky">
     <div class="navbarblockpos">
         <div class="navbarblockdiv">
             <a href="index.php" class="navbarbrand"><img src="../images/logo%20client%20détouré.png" height="40px"></a>
