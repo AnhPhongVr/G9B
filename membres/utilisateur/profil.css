@@ -1,0 +1,48 @@
+a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;	
+	text-align: center;
+}
+
+.menu{
+	display: flex;
+	flex-direction: column;
+	background-color: #1f2937;
+	width: 10%;
+}
+
+a:hover{
+	background-color: #374151;
+	padding: 20px; 
+}
+
+table{
+	border-collapse: collapse;
+	margin-left: 350px;
+	margin-bottom: 30px;
+}
+
+td{
+	border: solid black 1px;
+	font-size: 20px;
+	padding: 10px;
+}
+
+button{
+	margin-left: 555px;
+	padding: 8px;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+img{
+	margin-left: 450px;
+	margin-bottom: 50px;
+}
+
+.main{
+	display: flex;
+}
