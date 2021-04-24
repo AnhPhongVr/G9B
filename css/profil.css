@@ -1,4 +1,4 @@
-a{
+.menu a{
 	text-decoration: none;
 	color: white;
 	padding: 20px;	
@@ -12,14 +12,14 @@ a{
 	width: 10%;
 }
 
-a:hover{
+.menu a:hover{
 	background-color: #374151;
 	padding: 20px; 
 }
 
 table{
 	border-collapse: collapse;
-	margin-left: 350px;
+	margin-left: 470px;
 	margin-bottom: 30px;
 }
 
@@ -30,7 +30,7 @@ td{
 }
 
 button{
-	margin-left: 555px;
+	margin-left: 595px;
 	padding: 8px;
 }
 
@@ -39,7 +39,7 @@ button:hover{
 }
 
 img{
-	margin-left: 450px;
+	margin-left: 470px;
 	margin-bottom: 50px;
 }
 
