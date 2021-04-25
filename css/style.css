@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 html {
     font-family: "Merriweather Sans", serif;
     line-height: 1.5; /* 2 */
@@ -6,6 +10,7 @@ html {
 html, body {
     margin: 0;
     font-family: 'Oswald', sans-serif;
+    font-size: 20px;
     scroll-behavior: smooth;
 }
 
@@ -165,7 +170,6 @@ li{
     padding: 18px;
     color: white;
 }
-
 /*FAQ*/
 
 /*titre*/

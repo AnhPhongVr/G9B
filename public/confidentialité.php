@@ -21,7 +21,7 @@
 <!-- popup inscription -->
 <?php include("../membres/inscription.php") ?>
 
-<h1 align="center">Condition Génerale d'utilisation</h1>
+<h1 align="center">Confidentialité</h1>
 <hr style="height:1px;border:none;color:black;background-color:black;"/>
 
 <div class="accordion-content">
