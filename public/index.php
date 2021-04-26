@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- navbar -->
-    <?php include("navbar.php"); ?>
+    <!-- <?php include("navbar.php"); ?> -->
     <!-- popup connexion -->
     <?php include("../membres/connexion.php") ?>
     <!-- popup inscription -->
@@ -23,11 +23,45 @@
     <!-- titre -->
 
     <div id="titre">
-        <h2 data-text = "Infinite"> Infinite </h2>
-        <h2 data-text = "Measures"> Measures </h2>
-        <img src="..\images\Infinite measure détouré intérieur.png" alt="LogoWitsmed" width="400px" height="400px"/>
+        <table>
+            <tr>
+                <td align="right">
+                    <ion-icon name="log-in-outline"  class="icon"></ion-icon>
+                </td>
+                <td>
+                    <button id="myBtn" class="Accueilbutton">Connexion</button>
+                </td>
+                <td rowspan="0" style="border-spacing: 20px;">
+                    <img src="..\images\Infinite measure détouré intérieur.png" alt="LogoWitsmed" width="500px" height="500px"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <ion-icon name="help-circle-outline" class="icon""></ion-icon>
+                </td>
+                <td>
+                    <button class="Accueilbutton"><a href="FAQ.php">FAQ</a></button>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <ion-icon name="information-circle-outline" class="icon""></ion-icon>
+                </td>
+                <td>
+                    <button href="index.php#propos" class="Accueilbutton">A propos</button>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <ion-icon name="mail-outline" class="icon""></ion-icon>
+                </td>
+                <td>
+                    <button href="index.php#contact" class="Accueilbutton">Nous contacter</button>
+                </td>
+            </tr>
+        </table>
     </div>
-
+<!--
     <div id="propos" class="milieuImg">
         <img class="imgSlideLeft" src="../images/objets.png" style="left: 0px;">
         <div class="texteDroite">
@@ -57,10 +91,7 @@
             </div>
         </div>
     </div>
-
-    <!-- nous contacter -->
-    <?php include ("contacter.php") ?>
-
+-->
     <!-- pied de page -->
     <?php include("footer.php") ?>
 
