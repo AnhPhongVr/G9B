@@ -358,6 +358,7 @@ button:hover{
     cursor: pointer;
     border-radius: 300px;
     margin: 20px;
+    margin-right: 30vh;
 }
 
 .white {
@@ -366,7 +367,7 @@ button:hover{
 }
 
 td{
-    margin: 5%;
+    margin:5%;
 }
 .icon{ width: 100px; height: 100px; color: white;}
 
@@ -391,3 +392,4 @@ td{
     background-color: white;
     color: #266bd9;
 }
+
