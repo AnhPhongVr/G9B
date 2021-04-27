@@ -21,15 +21,15 @@
 <div class="ContenuQuestion">
     <h3>Questions :</h3>
     <p class="question">
-        Que faire si vous avez oublié votre mot de passe et votre adresse e-mail?<br>
+        Question supplémentaire<br>
         <button onclick="reponse('r1');">Afficher la réponse</button>
     </p>
     <p class="question">
-        Sommes-nous obligés de faire toutes les séries de tests?<br>
+        Question supplémentaire<br>
         <button onclick="reponse('r2');">Afficher la réponse</button>
     </p>
     <p class="question">
-        Que faire si votre résultat n'est pas concluant?<br>
+        Question supplémentaire<br>
         <button onclick="reponse('r3');">Afficher la réponse</button>
     </p>
     <p class="question">
@@ -49,9 +49,9 @@
 <!--Toutes les réponses-->
 <div class="ContenuReponse">
     <h3 id="titreReponse">Réponses :</h3>
-    <p class="r1" id="r1">Non vous n'êtes pas obligé(e) de faire tous les tests proposés. Il est possible de choisir uniquement le ou les tests que vous voulez faire.</p>
-    <p class="r2" id="r2">Dans ce cas, n'hésitez pas à nous contacter. Il y a en bas de la page une rubrique "nous contacter".</p>
-    <p class="r3" id="r3">Prenez une pause, respirez et recommencez. Si le test demeure non conluant alors vous êtes trop stressé(e), reposez vous.</p>
+    <p class="r1" id="r1">Réponse supplémentaire</p>
+    <p class="r2" id="r2">Réponse supplémentaire</p>
+    <p class="r3" id="r3">Réponse supplémentaire</p>
     <p class="r4" id="r4">Réponse supplémentaire</p>
     <p class="r5" id="r5">Réponse supplémentaire</p>
     <p class="r6" id="r6">Réponse supplémentaire</p>
@@ -60,11 +60,11 @@
 </div>
 
 <div class="pagination">
-  <a href="FAQ.php">&laquo;</a>
-  <a class="active" href="#">1</a>
-  <a href="FAQ2.php">2</a>
+  <a href=FAQ.php>&laquo;</a>
+  <a href="FAQ.php">1</a>
+  <a class="active" href="#">2</a>
   <a href="FAQ3.php">3</a>
-  <a href="FAQ2.php">&raquo;</a>
+  <a href="FAQ3.php">&raquo;</a>
 </div>
 
     <script src="../js/popup.js"></script>
