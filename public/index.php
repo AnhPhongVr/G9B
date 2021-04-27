@@ -11,6 +11,10 @@
     <link href="../css/navbar.css" rel="stylesheet">
     <link href="../css/popup.css" rel="stylesheet">
     <title>G9Bwebpage</title>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js" integrity="sha512-NBLGIjYyAoYAr23l+dmAcUv7TvFj0XrqZoFa4i1o+F2VvF9SrERyMD8BHNnJn1SEGjl1AouBDcCv/q52L3ozBQ==" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <!-- navbar -->
@@ -28,35 +32,35 @@
                 <td align="right">
                     <ion-icon name="log-in-outline"  class="icon"></ion-icon>
                 </td>
-                <td>
-                    <button id="myBtn" class="Accueilbutton">Connexion</button>
+                <td >
+                    <button id="myBtn" class="slide btn white">Connexion</button>
                 </td>
-                <td rowspan="0" style="border-spacing: 20px;">
-                    <img src="..\images\Infinite measure détouré intérieur.png" alt="LogoWitsmed" width="500px" height="500px"/>
-                </td>
-            </tr>
-            <tr>
-                <td align="right">
-                    <ion-icon name="help-circle-outline" class="icon""></ion-icon>
-                </td>
-                <td>
-                    <button class="Accueilbutton"><a href="FAQ.php">FAQ</a></button>
+                <td rowspan="4" style="border-spacing: 20px;">
+                    <?php include ("svganimation.php"); ?>
                 </td>
             </tr>
             <tr>
                 <td align="right">
-                    <ion-icon name="information-circle-outline" class="icon""></ion-icon>
+                    <ion-icon name="help-circle-outline" class="icon"></ion-icon>
                 </td>
-                <td>
-                    <button href="index.php#propos" class="Accueilbutton">A propos</button>
+                <td >
+                    <button class="slide btn white">FAQ</button>
                 </td>
             </tr>
             <tr>
                 <td align="right">
-                    <ion-icon name="mail-outline" class="icon""></ion-icon>
+                    <ion-icon name="information-circle-outline" class="icon"></ion-icon>
                 </td>
                 <td>
-                    <button href="index.php#contact" class="Accueilbutton">Nous contacter</button>
+                    <button href="index.php#propos" class="slide btn white">A propos</button>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <ion-icon name="mail-outline" class="icon"></ion-icon>
+                </td>
+                <td>
+                    <button href="index.php#contact" class="slide btn white">Nous contacter</button>
                 </td>
             </tr>
         </table>
@@ -94,11 +98,8 @@
 -->
     <!-- pied de page -->
     <?php include("footer.php") ?>
-
-
-
-<script src="../js/popup.js"></script>
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="../js/svganimation.js"></script>
+    <script src="../js/popup.js"></script>
 </body>
 </html>
 
