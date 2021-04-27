@@ -42,6 +42,13 @@ body {
     bottom: 0;
 }
 
+/*style pour le bouton accueil*/
+
+.btnAccueil{
+    text-decoration: none;
+    color: white;
+}
+
 /*style pour l'intitulé "powered by"*/
 .Powered{
     position: sticky;

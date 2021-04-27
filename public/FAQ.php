@@ -17,6 +17,8 @@
 <!--La contenu de la FAQ-->
 <div class="faq">
 
+    <a class="btnAccueil" href="index.php">Accueil</a>
+
 <!--Toutes les questions-->
 <div class="ContenuQuestion">
     <h3>Questions :</h3>
