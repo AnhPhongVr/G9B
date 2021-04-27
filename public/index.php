@@ -44,7 +44,7 @@
                     <ion-icon name="help-circle-outline" class="icon"></ion-icon>
                 </td>
                 <td >
-                    <button class="slide btn white">FAQ</button>
+                    <button class="slide btn white"><a href="FAQ.php">FAQ</a></button>
                 </td>
             </tr>
             <tr>
