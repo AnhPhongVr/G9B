@@ -42,11 +42,11 @@ body {
     bottom: 0;
 }
 
-/*style pour le bouton accueil*/
+/*style pour le bouton d'accueil*/
 
-.btnAccueil{
-    text-decoration: none;
-    color: white;
+.accueil{
+    margin-left: 8px;
+    margin-top: 8px; 
 }
 
 /*style pour l'intitulé "powered by"*/
