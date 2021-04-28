@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,16 +17,10 @@
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js" integrity="sha512-NBLGIjYyAoYAr23l+dmAcUv7TvFj0XrqZoFa4i1o+F2VvF9SrERyMD8BHNnJn1SEGjl1AouBDcCv/q52L3ozBQ==" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../js/switch_content.js"></script>
 </head>
 <body>
-    <!-- navbar -->
-    <!-- <?php include("navbar.php"); ?> -->
-    <!-- popup connexion -->
-    <?php include("../membres/connexion.php") ?>
-    <!-- popup inscription -->
-    <?php include("../membres/inscription.php") ?>
-
     <!-- titre -->
 
     <div id="titre">
@@ -32,11 +29,25 @@
                 <td align="right">
                     <ion-icon name="log-in-outline"  class="icon"></ion-icon>
                 </td>
-                <td >
-                    <button id="myBtn" class="slide btn white">Connexion</button>
+                <td>
+                    <button id="myBtn" class="connexion slide btn white">Connexion</button>
                 </td>
-                <td rowspan="4" style="border-spacing: 20px;">
-                    <?php include ("svganimation.php"); ?>
+                <td rowspan="4">
+                    <div class="box-logo">
+                        <?php include ("svganimation.php"); ?>
+                    </div>
+                    <div class="box-co">
+                        <?php include ("../membres/connexion.php"); ?>
+                    </div>
+                    <div class="box-contact">
+                        <?php include ("contacter.php")?>
+                    </div>
+                    <div class="box-about">
+                        <h1 align="center" style="color: white;">A propos</h1>
+                        <p style="color:white;">
+                            s nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.
+                        </p>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -52,7 +63,7 @@
                     <ion-icon name="information-circle-outline" class="icon"></ion-icon>
                 </td>
                 <td>
-                    <button href="index.php#propos" class="slide btn white">A propos</button>
+                    <button href="index.php#propos" class="about slide btn white">A propos</button>
                 </td>
             </tr>
             <tr>
@@ -60,7 +71,7 @@
                     <ion-icon name="mail-outline" class="icon"></ion-icon>
                 </td>
                 <td>
-                    <button href="index.php#contact" class="slide btn white">Nous contacter</button>
+                    <button href="index.php#contact" class="contact slide btn white">Nous contacter</button>
                 </td>
             </tr>
         </table>

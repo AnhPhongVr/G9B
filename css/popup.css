@@ -40,6 +40,10 @@
     padding: 10px;
 }
 
+.form-container td {
+    padding-right: 20px;
+}
+
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password], .form-container input[type=email]{
     background-color: #f1f1f1;
@@ -58,8 +62,8 @@
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-    background-color: #1f2937;
-    color: white;
+    background-color: white;
+    color: #266bd9;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
@@ -73,6 +77,11 @@
 .form-container .btn:hover {
     color: white;
     background-color: #374151;
+}
+
+.form-container textarea{
+    max-width: 40vw;
+    max-height: 15vh;
 }
 
 /*Style pour l'espace à remplir*/
