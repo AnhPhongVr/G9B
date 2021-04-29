@@ -51,7 +51,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 
 <!--Toutes les questions-->
 <div class="ContenuQuestion">
-    <h3>Questions :</h3>
+    <h3 class="titreQuestion">Questions :</h3>
     <p class="question">
         Question 1 : Que faire si vous avez oublié votre mot de passe et votre adresse e-mail?<br>
         <button onclick="reponse('r1');"><b>Afficher la réponse</b></button>
@@ -76,7 +76,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 
 <!--Toutes les réponses-->
 <div class="ContenuReponse">
-    <h3 id="titreReponse">Réponses :</h3>
+    <h3 class="titreReponse" id="titreReponse">Réponses :</h3>
     <p class="r1" id="r1">Non vous n'êtes pas obligé(e) de faire tous les tests proposés. Il est possible de choisir uniquement le ou les tests que vous voulez faire.</p>
     <p class="r2" id="r2">Dans ce cas, n'hésitez pas à nous contacter. Il y a en bas de la page une rubrique "nous contacter".</p>
     <p class="r3" id="r3">Prenez une pause, respirez et recommencez. Si le test demeure non conluant alors vous êtes trop stressé(e), reposez vous.</p>

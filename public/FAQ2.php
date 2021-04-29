@@ -49,7 +49,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     ?>
 <!--Toutes les questions-->
 <div class="ContenuQuestion">
-    <h3>Questions :</h3>
+    <h3 class="titreQuestion">Questions :</h3>
     <p class="question">
         Question 6 : Question supplémentaire<br>
         <button onclick="reponse('r1');"><b>Afficher la réponse</b></button>
@@ -74,7 +74,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 
 <!--Toutes les réponses-->
 <div class="ContenuReponse">
-    <h3 id="titreReponse">Réponses :</h3>
+    <h3 class="titreReponse" id="titreReponse">Réponses :</h3>
     <p class="r1" id="r1">Réponse supplémentaire</p>
     <p class="r2" id="r2">Réponse supplémentaire</p>
     <p class="r3" id="r3">Réponse supplémentaire</p>
@@ -100,10 +100,10 @@ if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 } else { ?>
     <div class="pagination">
         <a href="FAQ.php">&laquo;</a>
-        <a class="active" href="#">1</a>
-        <a href="FAQ2.php">2</a>
+        <a href="FAQ.php">1</a>
+        <a class="active" href="FAQ2.php">2</a>
         <a href="FAQ3.php">3</a>
-        <a href="FAQ2.php">&raquo;</a>
+        <a href="FAQ3.php">&raquo;</a>
     </div>
     <?php
 }
