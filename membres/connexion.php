@@ -16,9 +16,13 @@ if(isset($_POST['formconnexion']))
         {
             $userinfo = $requser->fetch();
             $_SESSION['id'] = $userinfo['id'];
-            $_SESSION['pseudo'] = $userinfo['pseudo'];
+            $_SESSION['usertype'] = $userinfo['usertype'];
             $_SESSION['mail'] = $userinfo['mail'];
-            header("Location: ../membres/utilisateur/menu.php?id=" .$_SESSION['id']);
+            if($userinfo['usertype'] == 'admin') {
+                header("Location: ../membres/admin.php?id=" .$_SESSION['id']);
+            } else {
+                header("Location: ../membres/utilisateur/menu.php?id=" .$_SESSION['id']);
+            }
         }
         else
         {

@@ -1,6 +1,7 @@
 <?php
-$bdd = new PDO('mysql:host=127.0.0.1;dbname=espace_membre;charset=utf8', 'root', '');
-if(isset($_GET['type']) AND $_GET['type'] == 'membre') {
+$bdd = new PDO('mysql:host=localhost ;dbname=espace_membre;charset=utf8', 'root', '');
+
+if(isset($_GET['usertype']) AND $_GET['usertype'] == 'membre') {
     if(isset($_GET['confirme']) AND !empty($_GET['confirme'])) {
         $confirme = (int) $_GET['confirme'];
         $req = $bdd->prepare('UPDATE membres SET confirme = 1 WHERE id = ?');

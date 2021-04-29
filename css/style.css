@@ -443,3 +443,36 @@ button:hover{
     border-radius: 300px;
     margin: 20px  20px 20px 0px;
 }
+
+.btn-admin{
+    width: 25vw;
+    height: 20vh;
+    text-align: center;
+    border: 5px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 14px 28px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 300px;
+    margin: 20px  20px 20px 0px;
+}
+
+.msg{
+    border: 5px solid white;
+    border-radius: 30px;
+    width: 25vw;
+}
+
+.titre_message {
+    font-size: medium;
+    text-decoration: underline;
+    color: white;
+}
+
+.icon-admin{
+    width: 10vh;
+    height: 10vh;
+    color: white;
+    margin-right: 20px;
+}

@@ -57,8 +57,8 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         <tr>
             <td>
                 <button class="btn-menu">
-                    <ion-icon name="people" class="icon"></ion-icon>
-                    Autres utilisateurs
+                    <ion-icon name="mail" class="icon"></ion-icon>
+                    Contacter l'administrateur
                 </button>
             </td>
             <td>

@@ -14,14 +14,8 @@
     <title>G9Bwebpage</title>
 </head>
 <body>
-    <!-- navbar -->
-    <?php include("navbar.php"); ?>
-    <!-- popup connexion -->
-    <?php include("../membres/connexion.php") ?>
-    <!-- popup inscription -->
-    <?php include("../membres/inscription.php") ?>
 
-    <h1 align="center">Mention légales</h1>
+    <h1 align="center" style="color: white;">Mention légales</h1>
     <hr style="height:1px;border:none;color:black;background-color:black;"/>
 
     <div class="accordion-content">
