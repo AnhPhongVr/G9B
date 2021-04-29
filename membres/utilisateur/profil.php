@@ -30,11 +30,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
                 if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
                 {
                     ?>
-                    <a href="../deconnexion.php">Se déconnecter</a>
+                    <a href="<?php echo "test.php?id=" .$_SESSION['id'];?>">Faire un test</a>
                     <?php
                 }
                 ?>
-                <a href="<?php echo "test.php?id=" .$_SESSION['id'];?>">Faire un test</a>
                 <?php
                 if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
                 {
