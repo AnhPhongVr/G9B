@@ -9,7 +9,8 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
     $requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");
     $requser->execute(array($getid));
     $userinfo = $requser->fetch();
-
+    if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+    {
     ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -67,17 +68,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
                 </button>
             </td>
             <td>
-                <?php
-                if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
-                {
-                    ?>
-                    <button id="logout" class="btn-menu">
+                <button id="logout" class="btn-menu">
                             <ion-icon name="log-out-outline" class="icon"></ion-icon>
                             Déconnexion
-                    </button>
-                    <?php
-                }
-                ?>
+                </button>
             </td>
         </tr>
    </table>
@@ -107,5 +101,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 </body>
 </html>
     <?php
+} else {
+        header("Location: ../../public/index.php");
+    }
+} else {
+    header("Location: ../../public/index.php");
 }
 ?>
