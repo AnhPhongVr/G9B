@@ -62,23 +62,69 @@ if(isset($_POST['forminscription']))
         <span class="close btnClose">&times;</span>
         <form method="POST" action="" class="form-container">
             <h1 class="titre">Inscription</h1>
-            <label for="prenom"><b>Prénom :</b></label>
-            <input type="text" id="prénom" name="prénom" placeholder="Veuillez entrer votre prénom" value="<?php if(isset($prenom)) {echo $prenom;} ?>" />
-            <label for="nom"><b>Nom :</b></label>
-            <input type="text" id="nom" name="nom" placeholder="Veuillez entrer votre nom" value="<?php if(isset($nom)) {echo $nom;} ?>">
-            <label for="adresse mail"><b>Adresse e-mail :</b></label>
-            <input type="email" id="mail" name="mail" placeholder="Veuillez entrer votre adresse e-mail" value="<?php if(isset($mail)) {echo $mail;} ?>">
-            <label for="password"><b>Mot de passe :</b></label>
-            <input type="password" name="password" class="password2" id="password" size="15" maxlength="100" onkeyup="return robustesse();" onkeyup="check()" placeholder="Veuillez entrer votre mot de passe"required>
-            <span id="force"></span><br>
-            <input type="checkbox" onclick="Afficher()" name="afficher">Afficher le mot de passe<br>
-            <label for="confirmation"><b>Confirmation :</b></label>
-            <input type="password" name="confirmation" id="confirmation" onkeyup="check()" placeholder="Veuillez confirmer votre mot de passe" required>
-            <span id="message"></span><br>
-            <input type="checkbox" onclick="AfficherConfirmation()" name="afficher">Afficher le mot de passe<br>
-            <br>
-            <input onclick="form_submit()" type="submit" class="btn" name="forminscription" value="Je m'inscris">
+            <table align = center>
+                <tr>
+                    <td style="text-align: right">
+                        <label for="prenom" style="color:white;"> Prénom :</label>
+                    </td>
+                    <td>
+                        <input type="text" id="prénom" name="prénom" placeholder="Veuillez entrer votre prénom" value="<?php if(isset($prenom)) {echo $prenom;} ?>" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <label for="nom" style="color:white;">Nom :</label>
+                    </td>
+                    <td>
+                        <input type="text" id="nom" name="nom" placeholder="Veuillez entrer votre nom" value="<?php if(isset($nom)) {echo $nom;} ?>">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <label for="email" style="color:white;">E-mail :</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" placeholder="Veuillez entrer votre adresse e-mail" value="<?php if(isset($mail)) {echo $mail;} ?>">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <label for="password" style="color:white;"><Mot de passe :</label>
+                    </td>
+                    <td>
+                        <input type="password" name="password" class="password2" id="password" size="15" maxlength="100" onkeyup="return robustesse();" onkeyup="check()" placeholder="Veuillez entrer votre mot de passe"required>
+                    </td>
+                    <td>
+                        <span id="force"></span><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <input type="checkbox" onclick="Afficher()" name="afficher">Afficher le mot de passe
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <label for="confirmation" style="color:white;">Confirmation :</label>
+                    </td>
+                    <td>
+                        <input type="password" name="confirmation" id="confirmation" onkeyup="check()" placeholder="Veuillez confirmer votre mot de passe" required>
+                    </td>
+                    <td>
+                        <span id="message"></span><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right">
+                        <input type="checkbox" onclick="AfficherConfirmation()" name="afficher">Afficher le mot de passe
+                    </td>
+                </tr>
+                <input onclick="form_submit()" type="submit"
+                       class="btn" name="forminscription" value="Je m'inscris">
+
+            </table>
         </form>
+
         <?php
         if (isset($erreur))
         {
