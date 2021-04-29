@@ -31,7 +31,15 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 <!--La contenu de la FAQ-->
 <div class="faq">
     <?php
-    if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+    if (isset($_SESSION['usertype']) AND $userinfo['usertype'] == $_SESSION['usertype']){
+        ?>
+        <a  class="accueil" href="<?php echo "../membres/admin.php?id=" .$_SESSION['id'];?>">
+            <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
+            <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
+        </a>
+        <?php
+    }
+    else if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
     {
         ?>
         <a  class="accueil" href="<?php echo "../membres/utilisateur/menu.php?id=" .$_SESSION['id'];?>">
@@ -47,7 +55,6 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     <?php
     }
     ?>
-
 
 <!--Toutes les questions-->
 <div class="ContenuQuestion">

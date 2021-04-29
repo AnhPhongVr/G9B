@@ -92,13 +92,13 @@ function robustesse() {
     var enoughRegex = new RegExp("(?=.{7,})(?=.*\\W).*$", "g");
     var pwd = document.getElementById("password");
         if (false == enoughRegex.test(pwd.value)) {
-            strength.innerHTML = 'More Characters';
+            strength.innerHTML = 'Plus de charactères et varier les types';
         } else if (strongRegex.test(pwd.value)) {
-            strength.innerHTML = '<span style="color:green">Strong!</span>';
+            strength.innerHTML = '<span style="color:green">Fort!</span>';
         } else if (mediumRegex.test(pwd.value)) {
-            strength.innerHTML = '<span style="color:orange">Medium!</span>';
+            strength.innerHTML = '<span style="color:orange">Moyen!</span>';
         } else {
-            strength.innerHTML = '<span style="color:red">Weak!</span>';
+            strength.innerHTML = '<span style="color:red">Faible!</span>';
         }
 }
 

@@ -81,15 +81,21 @@ if(isset($_SESSION['id']))
 
                <div class="main">
                 <div class="menu">
-                    <a href="<?php echo "menu.php?id=" .$_SESSION['id'];?>">Menu</a>
-                    <a href="<?php echo "profil.php?id=" .$_SESSION['id'];?>">Mon profil</a>
-                    <a href="<?php echo "données.php?id=" .$_SESSION['id'];?>">Mes données</a>
-                    <?php
-                    if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
-                    {
-                        ?>
-                        <a href="<?php echo "test.php?id=" .$_SESSION['id'];?>">Faire un test</a>
+                    <?php if($userinfo['usertype'] == $_SESSION['usertype']){ ?>
+                        <a href="<?php echo "../admin.php?id=" .$_SESSION['id'];?>">Menu</a>
+                        <a href="<?php echo "profil.php?id=" .$_SESSION['id'];?>">Mon profil</a>
                         <?php
+                    } else { ?>
+                        <a href="<?php echo "menu.php?id=" .$_SESSION['id'];?>">Menu</a>
+                        <a href="<?php echo "profil.php?id=" .$_SESSION['id'];?>">Mon profil</a>
+                        <a href="<?php echo "données.php?id=" .$_SESSION['id'];?>">Mes données</a>
+                        <?php
+                        if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+                        {
+                            ?>
+                            <a href="<?php echo "test.php?id=" .$_SESSION['id'];?>">Faire un test</a>
+                            <?php
+                        }
                     }
                     ?>
                     <?php
