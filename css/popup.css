@@ -186,3 +186,12 @@
     color: white;
     background-color: #374151;
 }
+
+.select{
+    background-color: #f1f1f1;
+    width: 30vw;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}

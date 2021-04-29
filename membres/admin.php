@@ -90,6 +90,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
             btn_FAQ.addEventListener('click', function (){
                 document.location.href = '<?php echo "../public/FAQ.php?id=" .$_SESSION['id']; ?>'
             })
+            var btn_sign = document.getElementById('sign');
+            btn_sign.addEventListener('click', function (){
+                document.location.href = '<?php echo "inscription.php?id=" .$_SESSION['id']; ?>'
+            })
         </script>
         </body>
         </html>

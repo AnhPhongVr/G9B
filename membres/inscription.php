@@ -1,20 +1,22 @@
 <?php
+session_start();
 
 $bdd = new PDO('mysql:host=localhost;dbname=espace_membre; charset=utf8', 'root', 'root');
 
 if(isset($_POST['forminscription']))
 {
-    $prénom = htmlspecialchars($_POST['prénom']);
+    $prenom = htmlspecialchars($_POST['prenom']);
     $nom = htmlspecialchars($_POST['nom']);
     $mail = htmlspecialchars($_POST['mail']);
+    $usertype = $_POST['usertype'];
     $pwd = sha1($_POST['password']);
     $conf = sha1($_POST['confirmation']);
 
-    if(!empty($_POST['prénom']) AND !empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['password']) AND !empty($_POST['confirmation']))
+    if(!empty($_POST['prenom']) AND !empty($_POST['nom']) AND !empty($_POST['mail']) AND !empty($_POST['password']) AND !empty($_POST['confirmation']))
     {
-        $prénomlength = strlen($prénom);
+        $prenomlength = strlen($prenom);
         $nomlength = strlen($nom);
-        if ($prénomlength <= 255 AND $nomlength <=255)
+        if ($prenomlength <= 255 AND $nomlength <=255)
         {
             if(filter_var($mail, FILTER_VALIDATE_EMAIL))
             {
@@ -25,9 +27,9 @@ if(isset($_POST['forminscription']))
                 {
                     if ($pwd == $conf)
                     {
-                        $insertmbr = $bdd->prepare("INSERT INTO membres(id, prenom, nom, usertype, mail, datedenaissance, motdepasse) VALUES (NULL, ?, ?, '', ?, NULL, ?)");
-                        $insertmbr->execute(array($prénom, $nom, $mail, $pwd));
-                        $erreur = "Votre compte a bien été crée ! <a href=\"connexion.php\">Me connecter</a>";
+                        $insertmbr = $bdd->prepare("INSERT INTO membres(id, prenom, nom, usertype, mail, datedenaissance, motdepasse) VALUES (NULL, ?, ?, ?, ?, NULL, ?)");
+                        $insertmbr->execute(array($prenom, $nom, $usertype, $mail, $pwd));
+                        $erreur = "Votre compte a bien été crée !";
                     }
                     else
                     {
@@ -55,23 +57,48 @@ if(isset($_POST['forminscription']))
     }
 }
 
+if(isset($_GET['id']) AND $_GET['id'] > 0)
+    {
+    $getid = intval($_GET['id']);
+    $requser = $bdd->prepare("SELECT * FROM membres JOIN données ON membres.id = données.iduser WHERE id = ?");
+    $requser->execute(array($getid));
+    $userinfo = $requser->fetch();
+
 ?>
-<!-- Popup -->
-<div id="Popup" class="modal">
-    <div class="modal-content">
-        <span class="close btnClose">&times;</span>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/navbar.css" rel="stylesheet">
+    <link href="../css/popup.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <title>G9Bwebpage</title>
+</head>
+<body style="overflow-y:hidden;">
+<a  class="accueil" href="<?php echo "admin.php?id=" .$_SESSION['id'];?>">
+    <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
+</a>
+    <div id="titre" class="data-box" align="center">
         <form method="POST" action="" class="form-container">
-            <h1 class="titre">Inscription</h1>
             <table align = center>
+                <tr>
+                    <td colspan="4">
+                        <h1 align="center" style="color: white;">Inscrire un utilisateur</h1>
+                    </td>
+                </tr>
                 <tr>
                     <td style="text-align: right">
                         <label for="prenom" style="color:white;"> Prénom :</label>
                     </td>
                     <td>
-                        <input type="text" id="prénom" name="prénom" placeholder="Veuillez entrer votre prénom" value="<?php if(isset($prenom)) {echo $prenom;} ?>" />
+                        <input type="text" id="prénom" name="prenom" placeholder="Veuillez entrer votre prénom" value="<?php if(isset($prenom)) {echo $prenom;} ?>" />
                     </td>
-                </tr>
-                <tr>
                     <td style="text-align: right">
                         <label for="nom" style="color:white;">Nom :</label>
                     </td>
@@ -84,57 +111,78 @@ if(isset($_POST['forminscription']))
                         <label for="email" style="color:white;">E-mail :</label>
                     </td>
                     <td>
-                        <input type="email" id="email" name="email" placeholder="Veuillez entrer votre adresse e-mail" value="<?php if(isset($mail)) {echo $mail;} ?>">
+                        <input type="email" id="email" name="mail" placeholder="Veuillez entrer votre adresse e-mail" value="<?php if(isset($mail)) {echo $mail;} ?>">
+                    </td>
+                    <td style="text-align: right">
+                        <label for="usertype" style="color:white;">Type d'utilisateur :</label>
+                    </td>
+                    <td>
+                        <select id="usertype" name="usertype" class="select">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: right">
-                        <label for="password" style="color:white;"><Mot de passe :</label>
+                        <label for="password" style="color:white;">Mot de passe :</label>
                     </td>
                     <td>
                         <input type="password" name="password" class="password2" id="password" size="15" maxlength="100" onkeyup="return robustesse();" onkeyup="check()" placeholder="Veuillez entrer votre mot de passe"required>
                     </td>
-                    <td>
-                        <span id="force"></span><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: right">
-                        <input type="checkbox" onclick="Afficher()" name="afficher">Afficher le mot de passe
-                    </td>
-                </tr>
-                <tr>
                     <td style="text-align: right">
                         <label for="confirmation" style="color:white;">Confirmation :</label>
                     </td>
                     <td>
                         <input type="password" name="confirmation" id="confirmation" onkeyup="check()" placeholder="Veuillez confirmer votre mot de passe" required>
                     </td>
+                </tr>
+                <tr>
+                    <td></td>
                     <td>
-                        <span id="message"></span><br>
+                        <span id="force"></span>
+                    </td>
+                    <td></td>
+                    <td >
+                        <span id="message"></span>
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align: right">
+                    <td>
+                    </td>
+                    <td>
+                        <input type="checkbox" onclick="Afficher()" name="afficher">Afficher le mot de passe
+                    </td>
+                    <td></td>
+                    <td>
                         <input type="checkbox" onclick="AfficherConfirmation()" name="afficher">Afficher le mot de passe
                     </td>
                 </tr>
-                <input onclick="form_submit()" type="submit"
-                       class="btn" name="forminscription" value="Je m'inscris">
-
+                <tr>
+                    <td colspan="4">
+                        <?php
+                        if (isset($erreur))
+                        {
+                            echo '<span style="color: red; ">' . $erreur . '</span>';
+                        }
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input type="submit" class="btn" name="forminscription" value="inscrire un utilisateur">
+                    </td>
+                </tr>
             </table>
         </form>
-
-        <?php
-        if (isset($erreur))
-        {
-            echo '<span style="color: red; ">' . $erreur . '</span>';
-        }
-        ?>
     </div>
 </div>
-<script type="text/javascript">
-    function form_submit() {
-        document.getElementById("search_form").submit();
-    }
-</script>
+<script src="../js/popup.js"></script>
+</body>
+</html>
+ <?php
+
+} else {
+    header("Location: ../public/index.php");
+}
+?>

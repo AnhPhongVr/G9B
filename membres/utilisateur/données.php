@@ -43,7 +43,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
                         Test
                     </th>
                     <th>
-                        Résultats
+                        Résultat
                     </th>
                     <th>
                         Date

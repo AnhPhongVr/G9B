@@ -9,7 +9,6 @@ html {
 
 html, body {
     margin: 0;
-    font-family: 'Oswald', sans-serif;
     font-size: 20px;
     scroll-behavior: smooth;
 }
@@ -475,4 +474,16 @@ button:hover{
     height: 10vh;
     color: white;
     margin-right: 20px;
+}
+
+.data-box{
+    color: white;
+    padding: 14px 28px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 20px;
+    background-color: transparent;
+    text-align: center;
+    border: 5px solid white;
 }
