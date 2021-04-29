@@ -17,7 +17,10 @@
 <!--La contenu de la FAQ-->
 <div class="faq">
 
-    <a class="accueil" href="index.php"><img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"></a>
+    <a  class="accueil" href="index.php">
+        <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
+        <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
+    </a>
 
 <!--Toutes les questions-->
 <div class="ContenuQuestion">

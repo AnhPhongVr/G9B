@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+$bdd = new PDO('mysql:host=localhost;dbname=espace_membre; charset=utf8', 'root', 'root');
+
+$getid = intval($_GET['id']);
+$requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");
+$requser->execute(array($getid));
+$userinfo = $requser->fetch();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,14 +21,32 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/navbar.css" rel="stylesheet">
     <link href="../css/popup.css" rel="stylesheet">
-	<title>FAQ</title>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <title>FAQ</title>
 </head>
 <body>
 
 <!--La contenu de la FAQ-->
 <div class="faq">
+    <?php
+    if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+    {
+        ?>
+        <a  class="accueil" href="<?php echo "../membres/utilisateur/menu.php?id=" .$_SESSION['id'];?>">
+            <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
+            <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
+        </a>
+        <?php
+    } else { ?>
+        <a  class="accueil" href="index.php">
+        <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
+        <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
+        </a>
+    <?php
+    }
+    ?>
 
-    <a  class="accueil" href="index.php"><img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"></a>
 
 <!--Toutes les questions-->
 <div class="ContenuQuestion">

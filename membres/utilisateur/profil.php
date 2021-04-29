@@ -23,9 +23,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 
         <div class="main">
             <div class="menu">
-                <a href="profil.php">Mon profil</a>
-                <a href="données.php">Mes données</a>
-                <a href="test.php">Faire un test</a>
+                <a href="<?php echo "menu.php?id=" .$_SESSION['id'];?>">Menu</a>
+                <a href="<?php echo "profil.php?id=" .$_SESSION['id'];?>">Mon profil</a>
+                <a href="<?php echo "données.php?id=" .$_SESSION['id'];?>">Mes données</a>
+                <a href="<?php echo "test.php?id=" .$_SESSION['id'];?>">Faire un test</a>
                 <?php
                 if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
                 {

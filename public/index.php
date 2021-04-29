@@ -30,12 +30,10 @@ session_start();
                     <ion-icon name="log-in-outline"  class="icon"></ion-icon>
                 </td>
                 <td>
-                    <button id="myBtn" class="connexion slide btn white">Connexion</button>
+                    <button class="connexion btn white">Connexion</button>
                 </td>
                 <td rowspan="4">
-                    <div class="box-logo">
-                        <?php include ("svganimation.php"); ?>
-                    </div>
+
                     <div class="box-co">
                         <?php include ("../membres/connexion.php"); ?>
                     </div>
@@ -48,6 +46,9 @@ session_start();
                             s nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.
                         </p>
                     </div>
+                    <div class="box-logo">
+                        <?php include ("svganimation.php"); ?>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -55,7 +56,7 @@ session_start();
                     <ion-icon name="help-circle-outline" class="icon"></ion-icon>
                 </td>
                 <td >
-                    <button class="slide btn white"><a href="FAQ.php">FAQ</a></button>
+                    <button id="FAQ" class="btn white">FAQ</button>
                 </td>
             </tr>
             <tr>
@@ -63,7 +64,7 @@ session_start();
                     <ion-icon name="information-circle-outline" class="icon"></ion-icon>
                 </td>
                 <td>
-                    <button href="index.php#propos" class="about slide btn white">A propos</button>
+                    <button href="index.php#propos" class="about btn white">A propos</button>
                 </td>
             </tr>
             <tr>
@@ -71,7 +72,7 @@ session_start();
                     <ion-icon name="mail-outline" class="icon"></ion-icon>
                 </td>
                 <td>
-                    <button href="index.php#contact" class="contact slide btn white">Nous contacter</button>
+                    <button href="index.php#contact" class="contact btn white">Nous contacter</button>
                 </td>
             </tr>
         </table>
@@ -111,6 +112,12 @@ session_start();
     <?php include("footer.php") ?>
     <script src="../js/svganimation.js"></script>
     <script src="../js/popup.js"></script>
+    <script>
+        var btn_FAQ = document.getElementById('FAQ');
+        btn_FAQ.addEventListener('click', function (){
+            document.location.href = 'FAQ.php'
+        })
+    </script>
 </body>
 </html>
 

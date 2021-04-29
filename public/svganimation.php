@@ -1,5 +1,5 @@
 <svg id="animation" xmlns="http://www.w3.org/2000/svg"
-     width="50vw" height="70vh"
+     width="60vw" height="70vh"
      viewBox="0 0 1081 1081">
     <path class="color-1" id="Sélection #1"
           fill="none" stroke="white" stroke-width="1"

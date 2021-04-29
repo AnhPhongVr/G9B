@@ -364,7 +364,7 @@ button:hover{
     font-size: 30px;
     cursor: pointer;
     border-radius: 300px;
-    margin: 20px;
+    margin: 20px  20px 20px 0px;
 }
 
 .white {
@@ -372,26 +372,8 @@ button:hover{
     color: white;
 }
 
-td{
-    margin:5%;
-}
-.icon{ width: 100px; height: 100px; color: white;}
-
-.slide {
-    position: relative;
-    left: -2000px;
-    -webkit-animation: slide 0.5s forwards;
-    -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
-    animation-delay: 2s;
-}
-
-@-webkit-keyframes slide {
-    100% { left: 0; }
-}
-
-@keyframes slide {
-    100% { left: 0; }
+.icon{
+    width: 100px; height: 100px; color: white; margin-right: 20px;
 }
 
 .btn:hover{
@@ -404,7 +386,7 @@ td{
     border: solid white 5px;
     border-radius: 50px;
     height:70vh;
-    width:50vw;
+    width:60vw;
 }
 
 .box-contact{
@@ -412,7 +394,7 @@ td{
     border: solid white 5px;
     border-radius: 50px;
     height:70vh;
-    width:50vw;
+    width:60vw;
 }
 
 .box-about{
@@ -420,5 +402,19 @@ td{
     border: solid white 5px;
     border-radius: 50px;
     height:70vh;
-    width:50vw;
+    width:60vw;
+}
+
+.btn-menu{
+    width: 25vw;
+    height: 25vh;
+    text-align: center;
+    border: 5px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 14px 28px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 300px;
+    margin: 20px  20px 20px 0px;
 }

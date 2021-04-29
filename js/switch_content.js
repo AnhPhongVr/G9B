@@ -3,6 +3,11 @@ $(document).ready(function(){
         $(".box-logo").toggle();
         $(".box-co").toggle();
     }
+    if($('.box-co').is(":visible")){
+        var btn = document.getElementsByClassName('.connexion btn white')
+        btn.style.color = '#6495ED';
+        btn.style.backgroundColor = 'white';
+    }
     $(".connexion").click(function(){
         if ($(`.box-logo`).is(":hidden")){
             $(".box-co").toggle();

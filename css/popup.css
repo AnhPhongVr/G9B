@@ -47,7 +47,7 @@
 /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password], .form-container input[type=email]{
     background-color: #f1f1f1;
-    width: 100%;
+    width: 30vw;
     padding: 12px 20px;
     margin: 8px 0;
     border-radius: 10px;
