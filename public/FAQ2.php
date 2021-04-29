@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$bdd = new PDO('mysql:host=localhost;dbname=espace_membre; charset=utf8', 'root', 'root');
+
+if(isset($_GET['id']) AND $_GET['id'] > 0) {
+    $getid = intval($_GET['id']);
+    $requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");
+    $requser->execute(array($getid));
+    $userinfo = $requser->fetch();
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +22,7 @@
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/navbar.css" rel="stylesheet">
     <link href="../css/popup.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 	<title>FAQ</title>
 </head>
 <body>
@@ -17,9 +30,23 @@
 <!--La contenu de la FAQ-->
 <div class="faq">
 
-    <a  class="accueil" href="index.php">
-        <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
-
+    <?php
+    if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+    {
+        ?>
+        <a  class="accueil" href="<?php echo "../membres/utilisateur/menu.php?id=" .$_SESSION['id'];?>">
+            <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
+            <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
+        </a>
+        <?php
+    } else { ?>
+        <a  class="accueil" href="index.php">
+            <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
+            <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
+        </a>
+        <?php
+    }
+    ?>
 <!--Toutes les questions-->
 <div class="ContenuQuestion">
     <h3>Questions :</h3>
@@ -58,14 +85,29 @@
 </div>
 </div>
 
-<div class="pagination">
-  <a href=FAQ.php>&laquo;</a>
-  <a href="FAQ.php">1</a>
-  <a class="active" href="#">2</a>
-  <a href="FAQ3.php">3</a>
-  <a href="FAQ3.php">&raquo;</a>
-</div>
-
+<?php
+if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+{
+    ?>
+    <div class="pagination">
+        <a href="<?php echo "FAQ.php?id=" .$_SESSION['id'];?>">&laquo;</a>
+        <a href="<?php echo "FAQ.php?id=" .$_SESSION['id'];?>">1</a>
+        <a class="active" href="#">2</a>
+        <a href="<?php echo "FAQ3.php?id=" .$_SESSION['id'];?>">3</a>
+        <a href="<?php echo "FAQ3.php?id=" .$_SESSION['id'];?>">&raquo;</a>
+    </div>
+    <?php
+} else { ?>
+    <div class="pagination">
+        <a href="FAQ.php">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="FAQ2.php">2</a>
+        <a href="FAQ3.php">3</a>
+        <a href="FAQ2.php">&raquo;</a>
+    </div>
+    <?php
+}
+?>
     <script src="../js/popup.js"></script>
     <script src="../js/faq.js"></script>
 </body>

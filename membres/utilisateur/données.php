@@ -62,7 +62,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
                           if($userinfo['test'] == 'reflexe son' or $userinfo['test'] == 'reflexe visuel'){
                               echo 'seconde';
                           }
-                          if($userinfo['test'] == 'son'){
+                          if($userinfo['test'] == 'trouble auditifs'){
                               echo '/10';
                           }
                           ?>

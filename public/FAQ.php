@@ -34,7 +34,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
     {
         ?>
-        <a  class="accueil" href="<?php echo "..///menu.php?id=" .$_SESSION['id'];?>">
+        <a  class="accueil" href="<?php echo "../membres/utilisateur/menu.php?id=" .$_SESSION['id'];?>">
             <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
             <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
         </a>
@@ -86,15 +86,29 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     <img src="../images/logo%20client%20détouré.png" class="logoClient" alt="logo client" id="logoClient">
 </div>
 </div>
-
-<div class="pagination">
-  <a href="FAQ.php">&laquo;</a>
-  <a class="active" href="#">1</a>
-  <a href="FAQ2.php">2</a>
-  <a href="FAQ3.php">3</a>
-  <a href="FAQ2.php">&raquo;</a>
-</div>
-
+<?php
+if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+{
+?>
+    <div class="pagination">
+        <a href="<?php echo "FAQ.php?id=" .$_SESSION['id'];?>">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="<?php echo "FAQ2.php?id=" .$_SESSION['id'];?>">2</a>
+        <a href="<?php echo "FAQ3.php?id=" .$_SESSION['id'];?>">3</a>
+        <a href="<?php echo "FAQ2.php?id=" .$_SESSION['id'];?>">&raquo;</a>
+    </div>
+    <?php
+} else { ?>
+    <div class="pagination">
+      <a href="FAQ.php">&laquo;</a>
+      <a class="active" href="#">1</a>
+      <a href="FAQ2.php">2</a>
+      <a href="FAQ3.php">3</a>
+      <a href="FAQ2.php">&raquo;</a>
+    </div>
+    <?php
+}
+?>
     <script src="../js/popup.js"></script>
     <script src="../js/faq.js"></script>
 </body>
