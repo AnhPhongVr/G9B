@@ -48,40 +48,44 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
                 <img src="../../images/utilisateur.png" alt="logo utilisateur">
                 <table>
                     <tr>
-                        <td>Nom</td>
+                        <td class="col1">Nom</td>
                         <td><?php echo $userinfo['nom']; ?></td>
                     </tr>
                     <tr>
-                        <td>Prénom</td>
+                        <td class="col1">Prénom</td>
                         <td><?php echo $userinfo['prenom'];?></td>
                     </tr>
                     <tr>
-                        <td>Adresse e-mail</td>
+                        <td class="col1">Adresse e-mail</td>
                         <td><?php echo $userinfo['mail']; ?></td>
                     </tr>
                     <tr>
-                        <td>Date de naissance</td>
+                        <td class="col1">Date de naissance</td>
                         <td><?php if($userinfo['datedenaissance'] == NULL){echo 'nothing';} else{echo $userinfo['datedenaissance'];} ?></td>
                     </tr>
                     <tr>
-                        <td>Type d'utilisateur</td>
+                        <td class="col1">Type d'utilisateur</td>
                         <td><?php echo $userinfo['usertype']; ?></td>
                     </tr>
                 </table>
-                <button>
-                    <b>
-                        <?php
+                <?php
                         if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
                         {
                             ?>
-                            <a href="editionprofil.php">Editer mon profil</a>
-                            <?php
+                <button class="btnEditer" id="btnEditer">
+                    <b>Editer mon profil</b>
+                </button>
+                <?php
                         }
                         ?>
-                    </b>
-                </button>
             </div>
         </div>
+        <script >
+            var btn_editer = document.getElementById('btnEditer');
+    btn_editer.addEventListener('click', function (){
+        document.location.href = '<?php echo "editionprofil.php?id=" .$_SESSION['id']; ?>'
+    })
+        </script>
     </body>
 </html>
 <?php
