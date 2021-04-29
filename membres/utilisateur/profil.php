@@ -18,6 +18,8 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         <meta charset="utf-8">
         <link href="../../css/style.css" rel="stylesheet">
         <link href="../../css/profil.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     </head>
     <body>
 

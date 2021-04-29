@@ -119,8 +119,9 @@ body {
 
 /*style pour les titres "Questions" et "Réponses*/
 h3{
-    font-family: Verdana;
+    color: white;
     margin: 0 auto; 
+    font-family: "Merriweather Sans", serif;
 }
 
 .ContenuReponse h3{
