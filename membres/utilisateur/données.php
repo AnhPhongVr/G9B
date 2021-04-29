@@ -28,9 +28,30 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 
         </head>
         <body>
-        <a  class="accueil" href="<?php echo "menu.php?id=" .$_SESSION['id'];?>">
-            <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
-        </a>
+        <div class="main">
+
+            <!-- barre de navigation transparente à gauche -->
+            <div class="menu">
+                <a href="<?php echo "menu.php?id=" .$_SESSION['id'];?>">Menu</a>
+                <a href="<?php echo "profil.php?id=" .$_SESSION['id'];?>">Mon profil</a>
+                <a href="<?php echo "données.php?id=" .$_SESSION['id'];?>">Mes données</a>
+                <?php
+                if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+                {
+                    ?>
+                    <a href="<?php echo "test.php?id=" .$_SESSION['id'];?>">Faire un test</a>
+                    <?php
+                }
+                ?>
+                <?php
+                if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+                {
+                    ?>
+                    <a href="../deconnexion.php">Se déconnecter</a>
+                    <?php
+                }
+                ?>
+            </div>
         <div id="titre" class="data-box" align="center">
             <table>
                 <tr>
@@ -74,6 +95,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
                 <?php }
                 ?>
             </table>
+        </div>
         </div>
         </body>
         </html>

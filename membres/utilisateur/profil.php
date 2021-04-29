@@ -25,7 +25,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 
         <div class="main">
             <div class="menu">
-                <?php if($userinfo['usertype'] == $_SESSION['usertype']){ ?>
+                <?php if($userinfo['usertype'] == 'admin'){ ?>
                     <a href="<?php echo "../admin.php?id=" .$_SESSION['id'];?>">Menu</a>
                     <a href="<?php echo "profil.php?id=" .$_SESSION['id'];?>">Mon profil</a>
                 <?php

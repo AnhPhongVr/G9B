@@ -487,3 +487,35 @@ button:hover{
     text-align: center;
     border: 5px solid white;
 }
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    border: solid white;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: center;
+    background-color: transparent;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/*style pour la page du profil*/
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.menu a:hover{
+    background-color: white;
+    padding: 20px;
+    color: #6495ED;
+}
+.main{
+    display: flex;
+}
