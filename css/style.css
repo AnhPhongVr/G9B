@@ -45,8 +45,11 @@ body {
 /*style pour le bouton d'accueil*/
 
 .accueil{
-    margin-left: 8px;
-    margin-top: 8px; 
+    position: absolute;
+    top:0;
+    right:0;
+    margin-right: 30px;
+    margin-top: 30px;
 }
 
 /*style pour l'intitulé "powered by"*/
@@ -112,7 +115,7 @@ body {
     color: #6495ED;
     border-color: white;
 }
-}
+
 
 /*style pour les titres "Questions" et "Réponses*/
 h3{
