@@ -53,28 +53,24 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 <div class="ContenuQuestion">
     <h3>Questions :</h3>
     <p class="question">
-        Que faire si vous avez oublié votre mot de passe et votre adresse e-mail?<br>
-        <button onclick="reponse('r1');">Afficher la réponse</button>
+        Question 1 : Que faire si vous avez oublié votre mot de passe et votre adresse e-mail?<br>
+        <button onclick="reponse('r1');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
-        Sommes-nous obligés de faire toutes les séries de tests?<br>
-        <button onclick="reponse('r2');">Afficher la réponse</button>
+        Question 2 : Sommes-nous obligés de faire toutes les séries de tests?<br>
+        <button onclick="reponse('r2');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
-        Que faire si votre résultat n'est pas concluant?<br>
-        <button onclick="reponse('r3');">Afficher la réponse</button>
+        Question 3 : Que faire si votre résultat n'est pas concluant?<br>
+        <button onclick="reponse('r3');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r4');">Afficher la réponse</button>
+        Question 4 : Question supplémentaire<br>
+        <button onclick="reponse('r4');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r5');">Afficher la réponse</button>
-    </p>
-    <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r6');">Afficher la réponse</button>
+        Question 5 : Question supplémentaire<br>
+        <button onclick="reponse('r5');"><b>Afficher la réponse</b></button>
     </p>
 </div>
 

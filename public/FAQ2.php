@@ -19,35 +19,29 @@
 
     <a  class="accueil" href="index.php">
         <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
-        <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
-    </a>
 
 <!--Toutes les questions-->
 <div class="ContenuQuestion">
     <h3>Questions :</h3>
     <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r1');">Afficher la réponse</button>
+        Question 6 : Question supplémentaire<br>
+        <button onclick="reponse('r1');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r2');">Afficher la réponse</button>
+        Question 7 : Question supplémentaire<br>
+        <button onclick="reponse('r2');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r3');">Afficher la réponse</button>
+        Question 8 : Question supplémentaire<br>
+        <button onclick="reponse('r3');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r4');">Afficher la réponse</button>
+        Question 9 : Question supplémentaire<br>
+        <button onclick="reponse('r4');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r5');">Afficher la réponse</button>
-    </p>
-    <p class="question">
-        Question supplémentaire<br>
-        <button onclick="reponse('r6');">Afficher la réponse</button>
+        Question 10 : Question supplémentaire<br>
+        <button onclick="reponse('r5');"><b>Afficher la réponse</b></button>
     </p>
 </div>
 

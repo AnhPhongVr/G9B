@@ -60,13 +60,14 @@ body {
 
 /*style pour les questions*/
 .question{
-    border: solid black;
+    border: solid white;
+    color: white;
     padding: 12px 20px;
     border-radius: 10px;
-    background-color: #AAC9E1;
+    background-color: transparent;
     margin-left: 20px;
     margin-bottom: 21px;
-    width: 100%;
+    width: 75%;
 }
 
 /*style pour les réponses*/
@@ -95,20 +96,28 @@ body {
     height:400px;
     position: absolute;
     right: 8em;
-    top: 10em;
+    top: 8em;
 }
 
 /*style pour les boutons "afficher les réponses"*/
 .ContenuQuestion button {
     border-radius: 10px;
-    background-color: #1f2937;
+    background-color: transparent;
     color: white;
+    border-color: white;
+}
+
+.ContenuQuestion button:hover{
+    background-color: white;
+    color: #6495ED;
+    border-color: white;
+}
 }
 
 /*style pour les titres "Questions" et "Réponses*/
 h3{
     font-family: Verdana;
-    text-align: center;
+    margin: 0 auto; 
 }
 
 .ContenuReponse h3{
