@@ -1,0 +1,63 @@
+.logoUtilisateur{
+	margin-left: 100px;
+	width: 350px;
+	height: 350px;
+	margin-top: 30px;
+}
+
+h2{
+	margin-left: 600px;
+	color: white;
+	font-family: "Merriweather Sans", serif;
+	margin-top: 50px;
+}
+
+table{
+	border-collapse: collapse;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+
+td{
+	border: solid white 3px;
+	padding: 10px;
+	color: white;
+}
+
+.btn{
+	margin-left: 150px;
+	margin-top: 20px;
+	color: white;
+	border-color: white;
+	background-color: transparent;
+}
+
+.menu a{
+	text-decoration: none;
+	color: white;
+	border: solid white;
+	border-radius: 40px;
+	padding: 20px;	
+	text-align: center;
+	background-color: transparent;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.menu{
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+	margin-left: 60px;
+}
+
+.menu a:hover{
+	background-color: white;
+	padding: 20px;
+	color: #6495ED;
+}
+
+.main{
+	display: flex;
+}

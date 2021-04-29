@@ -43,7 +43,7 @@ td{
 }
 
 .btnEditer {
-	margin-top: 100px;
+	margin-top: 30px;
 	margin-left: 360px;
 	color: white;
 	font-size: 15px;
@@ -82,9 +82,6 @@ h2{
 	margin-left: 610px;
 }
 
-.logoUtilisateur{
-	margin-left: 540px; 
-}
 
 .btn{
 	margin-left: 620px;
