@@ -99,9 +99,9 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         </html>
         <?php
     } else {
-        header("Location: ../../public/index.php");
+        header("Location: ../public/index.php");
     }
 } else {
-    header("Location: ../../public/index.php");
+    header("Location: ../public/index.php");
 }
 ?>
