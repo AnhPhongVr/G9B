@@ -60,35 +60,34 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     <h3 class="titreQuestion">Questions :</h3>
     <p class="question">
         Question 6 : Question supplémentaire<br>
-        <button onclick="reponse('r1');"><b>Afficher la réponse</b></button>
+        <button onclick="reponse('r6');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
         Question 7 : Question supplémentaire<br>
-        <button onclick="reponse('r2');"><b>Afficher la réponse</b></button>
+        <button onclick="reponse('r7');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
         Question 8 : Question supplémentaire<br>
-        <button onclick="reponse('r3');"><b>Afficher la réponse</b></button>
+        <button onclick="reponse('r8');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
         Question 9 : Question supplémentaire<br>
-        <button onclick="reponse('r4');"><b>Afficher la réponse</b></button>
+        <button onclick="reponse('r9');"><b>Afficher la réponse</b></button>
     </p>
     <p class="question">
         Question 10 : Question supplémentaire<br>
-        <button onclick="reponse('r5');"><b>Afficher la réponse</b></button>
+        <button onclick="reponse('r10');"><b>Afficher la réponse</b></button>
     </p>
 </div>
 
 <!--Toutes les réponses-->
 <div class="ContenuReponse">
     <h3 class="titreReponse" id="titreReponse">Réponses :</h3>
-    <p class="r1" id="r1">Réponse supplémentaire</p>
-    <p class="r2" id="r2">Réponse supplémentaire</p>
-    <p class="r3" id="r3">Réponse supplémentaire</p>
-    <p class="r4" id="r4">Réponse supplémentaire</p>
-    <p class="r5" id="r5">Réponse supplémentaire</p>
-    <p class="r6" id="r6">Réponse supplémentaire</p>
+    <p class="r1" id="r6">Réponse 6 : Réponse supplémentaire</p>
+    <p class="r2" id="r7">Réponse 7 : Réponse supplémentaire</p>
+    <p class="r3" id="r8">Réponse 8 : Réponse supplémentaire</p>
+    <p class="r4" id="r9">Réponse 9 : Réponse supplémentaire</p>
+    <p class="r5" id="r10">Réponse 10 : Réponse supplémentaire</p>
     <img src="../images/logo%20client%20détouré.png" class="logoClient" alt="logo client" id="logoClient">
 </div>
 </div>

@@ -84,12 +84,11 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 <!--Toutes les réponses-->
 <div class="ContenuReponse">
     <h3 class="titreReponse" id="titreReponse">Réponses :</h3>
-    <p class="r1" id="r1">Non vous n'êtes pas obligé(e) de faire tous les tests proposés. Il est possible de choisir uniquement le ou les tests que vous voulez faire.</p>
-    <p class="r2" id="r2">Dans ce cas, n'hésitez pas à nous contacter. Il y a en bas de la page une rubrique "nous contacter".</p>
-    <p class="r3" id="r3">Prenez une pause, respirez et recommencez. Si le test demeure non conluant alors vous êtes trop stressé(e), reposez vous.</p>
-    <p class="r4" id="r4">Réponse supplémentaire</p>
-    <p class="r5" id="r5">Réponse supplémentaire</p>
-    <p class="r6" id="r6">Réponse supplémentaire</p>
+    <p class="r1" id="r1">Réponse 1 : Non vous n'êtes pas obligé(e) de faire tous les tests proposés. Il est possible de choisir uniquement le ou les tests que vous voulez faire.</p>
+    <p class="r2" id="r2">Réponse 2 : Dans ce cas, n'hésitez pas à nous contacter. Il y a en bas de la page une rubrique "nous contacter".</p>
+    <p class="r3" id="r3">Réponse 3 : Prenez une pause, respirez et recommencez. Si le test demeure non conluant alors vous êtes trop stressé(e), reposez vous.</p>
+    <p class="r4" id="r4">Réponse 4 : Réponse supplémentaire</p>
+    <p class="r5" id="r5">Réponse 5 : Réponse supplémentaire</p>
     <img src="../images/logo%20client%20détouré.png" class="logoClient" alt="logo client" id="logoClient">
 </div>
 </div>
