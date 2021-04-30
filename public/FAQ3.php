@@ -32,7 +32,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 <div class="faq">
 
     <?php
-    if (isset($_SESSION['usertype']) AND $userinfo['usertype'] == $_SESSION['usertype']){
+    if (isset($_SESSION['usertype']) AND $userinfo['usertype'] == 'admin'){
         ?>
         <a  class="accueil" href="<?php echo "../membres/admin.php?id=" .$_SESSION['id'];?>">
             <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
