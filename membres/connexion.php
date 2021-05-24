@@ -68,7 +68,7 @@ if(isset($_POST['formconnexion']))
             <td>
             </td>
             <td>
-                <input onclick="form_submit()" type="submit" name="formconnexion" class="btn" id="login_button" value="Connexion" />
+                <input onclick="form_submit()" type="submit" name="formconnexion" class="btn" id="login_button" value="Confirmer" />
             </td>
         </tr>
     </table>
