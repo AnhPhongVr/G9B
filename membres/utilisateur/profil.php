@@ -53,9 +53,14 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
             </div>
 
             <div class="contenu">
-                <img src="../../images/Jean.png" alt="logo utilisateur" weight="420px" width="420px">
+                <!--<img src="../../images/Jean.png" alt="logo utilisateur" weight="420px" width="420px">-->
                 <table>
+                    <thead>
                     <tr>
+                        <th>Mon profil</th>
+                    </tr>
+                    <tr>
+                    </thead>
                         <td class="col1">Nom</td>
                         <td><?php echo $userinfo['nom']; ?></td>
                     </tr>
