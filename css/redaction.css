@@ -1,0 +1,40 @@
+form{
+	border: white solid 3px;
+	border-radius: 10px;
+	width: 50%;
+	padding-right: 3vw;
+	padding-left: 3vw;
+	margin: 0 auto;
+	margin-top: 15vw;
+	height: 20vw;
+}
+
+textarea{
+	height: 12vw;
+	width: 100%;
+}
+
+input{
+	text-decoration: none;
+	border: solid white 3px;
+	color: white;
+	padding: 3px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: transparent;
+	border-radius: 10px;
+	margin-left: 20vw;
+	font-size: 18px;
+}
+
+input:hover{
+	background-color: white;
+	color: #6495ED;
+	cursor: pointer;
+}
+
+h1{
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}

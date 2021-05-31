@@ -10,6 +10,39 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     $userinfo = $requser->fetch();
 }
 ?>
+
+<?php
+$bdd = new PDO("mysql:host=localhost;dbname=FAQ;charset=utf8", "root", "root");
+$questionsParPage = 5;
+$questionsTotalesReq = $bdd->query('SELECT id_Question FROM Questions');
+$questionsTotales = $questionsTotalesReq->rowCount();
+$pagesTotales = ceil($questionsTotales/$questionsParPage);
+if(isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $pagesTotales) {
+   $_GET['page'] = intval($_GET['page']);
+   $pageCourante = $_GET['page'];
+} else {
+   $pageCourante = 1;
+}
+$depart = ($pageCourante-1)*$questionsParPage;
+
+?>
+
+<?php
+$bdd = new PDO("mysql:host=localhost;dbname=FAQ;charset=utf8", "root", "root");
+$reponsesParPage = 5;
+$reponsesTotalesReq = $bdd->query('SELECT id_Reponse FROM Réponses');
+$reponsesTotales = $reponsesTotalesReq->rowCount();
+$pagesTotales = ceil($reponsesTotales/$reponsesParPage);
+if(isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $pagesTotales) {
+   $_GET['page'] = intval($_GET['page']);
+   $pageCourante = $_GET['page'];
+} else {
+   $pageCourante = 1;
+}
+$depart = ($pageCourante-1)*$reponsesParPage;
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,7 +90,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     ?>
 
 <!--Toutes les questions-->
-<div class="ContenuQuestion">
+<!--<div class="ContenuQuestion">
     <h3 class="titreQuestion">Questions :</h3>
     <p class="question">
         Question 1 : Que faire si vous avez oublié votre mot de passe et votre adresse e-mail?<br>
@@ -79,10 +112,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
         Question 5 : Question supplémentaire<br>
         <button onclick="reponse('r5');"><b>Afficher la réponse</b></button>
     </p>
-</div>
+</div>-->
 
 <!--Toutes les réponses-->
-<div class="ContenuReponse">
+<!--<div class="ContenuReponse">
     <h3 class="titreReponse" id="titreReponse">Réponses :</h3>
     <p class="r1" id="r1">Réponse 1 : Non vous n'êtes pas obligé(e) de faire tous les tests proposés. Il est possible de choisir uniquement le ou les tests que vous voulez faire.</p>
     <p class="r2" id="r2">Réponse 2 : Dans ce cas, n'hésitez pas à nous contacter. Il y a en bas de la page une rubrique "nous contacter".</p>
@@ -91,8 +124,8 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     <p class="r5" id="r5">Réponse 5 : Réponse supplémentaire</p>
     <img src="../images/logo%20client%20détouré.png" class="logoClient" alt="logo client" id="logoClient">
 </div>
-</div>
-<?php
+</div>-->
+<!--<?php
 if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 {
 ?>
@@ -114,7 +147,44 @@ if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
     </div>
     <?php
 }
+?>-->
+
+<div class="faq">
+<?php
+  $questions = $bdd->query('SELECT * FROM Questions ORDER BY id_Question ASC LIMIT '.$depart.','.$questionsParPage);
+  while($q = $questions->fetch()) {
+  ?>
+  <div class="question">
+    <b>N°<?php echo $q['id_Question']; ?> - <?php echo $q['Question']; ?></b><br>
+    <a href="redaction.php?edit=<?= $a['id_Question'] ?>">Modifier</a>
+    <a href="supprimer.php?id=<?= $a['id_Question'] ?>">Supprimer</a>
+    <a href="">Réponse</a>
+  </div>
+<?php } ?>
+
+<?php
+  $reponses = $bdd->query('SELECT * FROM Réponses ORDER BY id_Reponse ASC LIMIT '.$depart.','.$questionsParPage);
+  while($r = $reponses->fetch()) {
+  ?>
+  <div class="question">
+    <b><?php echo $r['Reponse']; ?></b><br>
+  </div>
+<?php } ?>
+ </div>
+
+  <div class="pagination">
+<?php
+  for($i=1;$i<=$pagesTotales;$i++) {
+     if($i == $pageCourante) {
+        echo $i.' ';
+     } else {
+        echo '<a href="FAQ.php?page='.$i.'">'.$i.'</a> ';
+     }
+  }
 ?>
+</div>
+
+
     <script src="../js/popup.js"></script>
     <script src="../js/faq.js"></script>
 </body>

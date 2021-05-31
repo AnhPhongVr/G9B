@@ -31,6 +31,10 @@ body {
 
 /*FAQ*/
 
+.faq{
+    display: flex;
+}
+
 /*style pour le logo Witsmed*/
 
 .logoWitsmed{
@@ -72,28 +76,19 @@ body {
     width: 40vw;
 }
 
-/*style pour les réponses*/
-.r1, .r2, .r3, .r4, .r5, .r6{
-    border: solid white;
-    position: static;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
-    background-color: transparent;
-    margin-left: 100px;
-    width: 40vw;
-    height: 7vw;
+.question a{
+    margin-right: 5px;
 }
 
-/*disparition des questions*/
+/*disparition des réponses*/
 .r1, .r2, .r3, .r4, .r5, .r6{
     display: none;
 }
 
 /*mise des questions et des réponses côte à côte*/
-.faq{
+/*.faq{
     display: flex;
-}
+}*/
 
 /*style pour le logo de notre client*/
 .logoClient{
@@ -264,7 +259,7 @@ li{
 /*style pour la pagination de la FAQ*/
 
 .pagination{
-    margin: 0 auto;
+    margin-left: 45vw;
 }
 
 .pagination a{
