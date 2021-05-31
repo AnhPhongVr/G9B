@@ -37,19 +37,19 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         <tr>
             <td>
                 <button id="profil" class="btn-menu">
-                        <ion-icon name="id-card" class="icon"></ion-icon>
+                        <ion-icon name="id-card" class="icon"></ion-icon><br/>
                         Profil
                 </button>
             </td>
             <td>
                 <button id="data" class="btn-menu">
-                        <ion-icon name="analytics" class="icon"></ion-icon>
+                        <ion-icon name="analytics" class="icon"></ion-icon><br/>
                         Données
                 </button>
             </td>
             <td>
                 <button id="test" class="btn-menu">
-                        <ion-icon name="fitness" class="icon"></ion-icon>
+                        <ion-icon name="fitness" class="icon"></ion-icon><br/>
                         Test
                 </button>
             </td>
@@ -57,20 +57,20 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         <tr>
             <td>
                 <button class="btn-menu">
-                    <ion-icon name="mail" class="icon"></ion-icon>
-                    Contacter l'administrateur
+                    <ion-icon name="mail" class="icon"></ion-icon><br/>
+                    Administrateur
                 </button>
             </td>
             <td>
                 <button id="FAQ" class="btn-menu">
-                    <ion-icon name="help" class="icon"></ion-icon>
+                    <ion-icon name="help" class="icon"></ion-icon><br/>
                     FAQ
                 </button>
             </td>
             <td>
                 <button id="logout" class="btn-menu">
-                            <ion-icon name="log-out-outline" class="icon"></ion-icon>
-                            Déconnexion
+                    <ion-icon name="log-out-outline" class="icon"></ion-icon><br/>
+                    Déconnexion
                 </button>
             </td>
         </tr>

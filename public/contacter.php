@@ -24,7 +24,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" name="send" class="btn" value="Envoyer" />
+                <input type="submit" name="send" class="btn" value="Confirmer" />
             </td>
         </tr>
     </table>
