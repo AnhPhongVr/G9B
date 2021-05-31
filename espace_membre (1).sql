@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 31, 2021 at 12:27 PM
+-- Generation Time: May 31, 2021 at 12:35 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -87,7 +87,8 @@ INSERT INTO `membres` (`id`, `prenom`, `nom`, `usertype`, `mail`, `datedenaissan
 (7, 'Joseph', 'Joestar', 'user', 'jojo@gmail.com', NULL, '782dd27ea8e3b4f4095ffa38eeb4d20b59069077'),
 (8, 'Garry', 'Bot', 'user', 'garry@bot.fr', NULL, '782dd27ea8e3b4f4095ffa38eeb4d20b59069077'),
 (9, 'Christopher', 'Zig', 'admin', 'Chriszg@gmail.com', NULL, '1ff4fa636016eb53ce671edfa086e587817bd795'),
-(10, 'Chris', 'Ale', 'user', 'chris@gmail.com', NULL, '782dd27ea8e3b4f4095ffa38eeb4d20b59069077');
+(10, 'Chris', 'Ale', 'user', 'chris@gmail.com', NULL, '782dd27ea8e3b4f4095ffa38eeb4d20b59069077'),
+(11, 'admin', 'admin', 'admin', 'admin@admin.fr', NULL, 'd033e22ae348aeb5660fc2140aec35850c4da997');
 
 --
 -- Indexes for dumped tables
@@ -120,7 +121,7 @@ ALTER TABLE `données`
 -- AUTO_INCREMENT for table `membres`
 --
 ALTER TABLE `membres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
