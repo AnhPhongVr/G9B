@@ -21,15 +21,15 @@
         <form method="POST" action="" class="form-container">
             <table align = center>
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <h1 align="center" style="color: white;">Gestion des utilisateurs</h1>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <form action="" method="POST" class="form-container">
-                            <input type="search" name="search" placeholder="Recherche..."/>
-                            <input type="submit" value="valider"/>
+                            <input class="rechercher" type="search" name="search" placeholder="Recherche..."/>
+                            <input class="btnValider" type="submit" value="Valider"/>
                         </form>
                     </td>
                     <td>

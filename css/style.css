@@ -275,6 +275,14 @@ li{
     margin: 20px  20px 20px 0px;
 }
 
+.btnValider{
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    margin-top: 20px;
+}
+
 .white {
     border-color: white;
     color: white;
