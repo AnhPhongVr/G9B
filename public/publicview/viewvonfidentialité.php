@@ -65,7 +65,7 @@
         </div>
     </div>
     <!-- pied de page -->
-    <?php include("footer.php") ?>
+    <?php include("publicview/footer.php") ?>
 
     <script src="../js/accordion.js"></script>
 
