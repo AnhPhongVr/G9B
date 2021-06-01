@@ -47,14 +47,18 @@
                 <p>
                     ISEP s’engage à garantir le respect de la vie privée des internautes qui visitent ce site web et à veiller dans les limites de l’état de l’art à la confidentialité des informations personnelles qui lui sont transmises.
                     Les destinataires des données sont  ISEP et ses collaborateurs uniquement.
-                    DROITS D'ACCÈS, DE MODIFICATION ET DE SUPPRESSION DES DONNÉES
+
+                </p>
+            </div>
+            <button class="accordion">Section 4</button>
+            <div class ="panel">
+                <p>DROITS D'ACCÈS, DE MODIFICATION ET DE SUPPRESSION DES DONNÉES</p><br>
+                <p>
                     Conformément à la loi «informatique et libertés» du 6 janvier 1978, vous bénéficiez d’un droit d’accès et de rectification aux informations qui vous concernent. Si vous souhaitez exercer ce droit et obtenir communication des informations vous concernant, veuillez adresser un courrier à M. Dieudonné Abboud,  ISEP ,  28 rue Notre Dame des Champs, 75006 Paris, en joignant une photocopie de votre carte d’identité.
                     Afin de répondre à votre demande, merci de nous fournir quelques indications (date et contexte de votre dernier contact avec ISEP.  Merci également d’indiquer un numéro de téléphone pour vous joindre si nous avons besoin de précision pour traiter avec célérité votre demande.
                     Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.
                 </p>
-
             </div>
-
         </div>
     </div>
     <!-- pied de page -->
