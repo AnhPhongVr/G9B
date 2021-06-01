@@ -68,6 +68,8 @@ body {
 
 .question a{
     margin-right: 5px;
+    text-decoration: none;
+    color: white;
 }
 
 /*disparition des réponses*/
@@ -273,14 +275,6 @@ li{
     cursor: pointer;
     border-radius: 300px;
     margin: 20px  20px 20px 0px;
-}
-
-.btnValider{
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
-    border-color: white;
-    margin-top: 20px;
 }
 
 .white {
