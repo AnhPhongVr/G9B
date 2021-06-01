@@ -37,7 +37,7 @@ session_start();
                         <?php include ("../membres/connexion.php"); ?>
                     </div>
                     <div class="box-contact">
-                        <?php include ("contacter.php")?>
+                        <?php include("contacter.php") ?>
                     </div>
                     <div class="box-about">
                         <h1 align="center" style="color: white;">A propos</h1>
@@ -47,7 +47,7 @@ session_start();
                         </p>
                     </div>
                     <div class="box-logo">
-                        <?php include ("svganimation.php"); ?>
+                        <?php include("svganimation.php"); ?>
                     </div>
                 </td>
             </tr>
