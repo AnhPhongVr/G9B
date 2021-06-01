@@ -76,7 +76,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/navbar.css" rel="stylesheet">
-    <link href="../css/popup.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <title>G9Bwebpage</title>
 </head>
@@ -177,7 +177,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         </form>
     </div>
 </div>
-<script src="../js/popup.js"></script>
+<script src="../js/mdp.js"></script>
 </body>
 </html>
  <?php

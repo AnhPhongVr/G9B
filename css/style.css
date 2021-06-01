@@ -22,12 +22,6 @@ body {
     flex-direction: column;
 }
 
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
 
 /*FAQ*/
 
@@ -114,18 +108,18 @@ body {
 /*style pour les titres "Questions" et "Réponses*/
 .titreQuestion{
     color: white;
-    margin: 0 auto; 
+    margin: 0 auto;
     font-family: "Merriweather Sans", serif;
     margin-top: 20px;
-    margin-left: 15vw; 
+    margin-left: 15vw;
 }
 
 .titreReponse{
     color: white;
-    margin: 0 auto; 
+    margin: 0 auto;
     font-family: "Merriweather Sans", serif;
     margin-top: 20px;
-    margin-left: 3vw; 
+    margin-left: 3vw;
 }
 
 .ContenuReponse h3{
@@ -141,34 +135,8 @@ body {
 	.question, .reponse{width: 35%;}
 }*/
 
-/*style pour tout le bas de la page*/
 
-/*style pour le pied de page avec la partie "nous contacter"*/
-.pied{
-    background-color: #eaeae6;
-    border-top: 1px solid #d5d4d1;
-    padding: 50px;
-    text-align: center;
-}
-/*style pour le bouton "appeler" du pied de page*/
-.appeler{
-    border: solid grey 3px;
-    background-color: #EEEEEE;
-    width: 35%;
-    padding: 10px 8px;
-    font-size: 25px;
-    margin-right: 30px;
-}
 
-/*style pour le bouton "envoyer un e-mail" du pied de page*/
-.mail{
-    border: solid grey 3px;
-    background-color: #EEEEEE;
-    width: 35%;
-    padding: 10px 8px;
-    font-size: 25px;
-    margin-left: 30px;
-}
 
 /*style pour le "nous contacter" du pied de page*/
 .contact{
@@ -274,83 +242,6 @@ li{
 .pagination a.active{
     background-color: white;
     color: #6495ED;
-}
-
-/*titre*/
-
-.milieuImg{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-weight: 300;
-    flex-direction: row;
-    padding: 5% 5% 8% 5%;
-    height: 100%;
-}
-
-.milieuImg img {
-    position: relative;
-    padding-right: 50px;
-    height: 400px;
-    width: 400px;
-
-}
-
-.texteDroite{
-    font-size: 2vw;
-}
-
-#milieu{
-    background-color: #c6cdda;
-    text-align: center;
-    font-weight: 300;
-    display: inline-block;
-    padding: 5% 5% 8% 5%;
-    font-size: 2vw;
-}
-
-.icones{
-    display: flex;
-    justify-content: space-between;
-    text-align: justify;
-    text-align-last: center;
-}
-
-.milieuGauche, .milieuCentre, .milieuDroite {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.icones ion-icon {
-    font-size: 5vw;
-}
-
-.hydrated {
-    visibility: inherit;
-}
-
-:host {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    contain: strict;
-    fill: currentcolor;
-    box-sizing: content-box !important;
-}
-
-.icones ion-icon:hover {
-    -ms-transform: scale(1.5,1.5); /* pour IE 9 */
-    -webkit-transform: scale(1.5,1.5); /* pour Safari < 9.0 */
-    transform: scale(1.5,1.5); /* Syntaxe normale */
-    transition: transform 1s;
-}
-
-button:hover{
-    cursor: pointer;
-}
-.accordon-header{
-     background-color:#f2f3f4 ;
 }
 
 /* width */

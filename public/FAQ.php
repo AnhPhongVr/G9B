@@ -50,8 +50,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/navbar.css" rel="stylesheet">
-    <link href="../css/popup.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
     <title>FAQ</title>
@@ -127,8 +126,6 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 ?>
 </div>-->
 
-
-    <script src="../js/popup.js"></script>
     <script src="../js/faq.js"></script>
 </body>
 </html>
