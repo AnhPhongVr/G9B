@@ -31,10 +31,6 @@ body {
 
 /*FAQ*/
 
-.faq{
-    display: flex;
-}
-
 /*style pour le logo Witsmed*/
 
 .logoWitsmed{
@@ -71,9 +67,9 @@ body {
     padding: 12px 20px;
     border-radius: 10px;
     background-color: transparent;
-    margin-left: 20px;
+    margin-left: 8vw;
     margin-bottom: 21px;
-    width: 40vw;
+    width: 80vw;
 }
 
 .question a{

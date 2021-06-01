@@ -1,10 +1,10 @@
 <?php
-$bdd = new PDO("mysql:host=localhost;dbname=FAQ;charset=utf8", "root", "root");
+$faq = new PDO("mysql:host=localhost;dbname=FAQ;charset=utf8", "root", "root");
 $mode_edition = 0;
 if(isset($_GET['id_Question']) AND !empty($_GET['id_Question'])) {
    $mode_edition = 1;
    $edit_id = htmlspecialchars($_GET['id_Question']);
-   $edit_question = $bdd->prepare('SELECT * FROM Questions WHERE id_Questions = ?');
+   $edit_question = $faq->prepare('SELECT * FROM Questions WHERE id_Questions = ?');
    $edit_question->execute(array($edit_id));
    if($edit_question->rowCount() == 1) {
       $edit_question = $edit_question->fetch();
@@ -12,18 +12,17 @@ if(isset($_GET['id_Question']) AND !empty($_GET['id_Question'])) {
       die('Erreur : la question n\'existe pas...');
    }
 }
-if(isset($_POST['Questions_Question'])) {
-   if(!empty($_POST['Questions_Question'])) {
-      
-      $Questions_Question = htmlspecialchars($_POST['Questions_Question']);
+if(isset($_POST['Question_question'])) {
+   if(!empty($_POST['Question_question'])) {
+      $Questions_Question = htmlspecialchars($_POST['Question_question']);
       if($mode_edition == 0) {
-         $ins = $bdd->prepare('INSERT INTO Questions (Question) VALUES (?)');
+         $ins = $faq->prepare('INSERT INTO Questions (Question) VALUES (?)');
          $ins->execute(array($Questions_Question));
          $message = 'Votre question a bien été postée';
       } else {
-         $update = $bdd->prepare('UPDATE Questions SET Question = ? WHERE id_Question = ?');
+         $update = $faq->prepare('UPDATE Questions SET Question = ? WHERE id_Question = ?');
          $update->execute(array($Questions_Question));
-         header('Location: http://localhost:8888/public/redaction.php?edit='.$edit_id);
+         header('Location: http://localhost:8888/public/FAQ.php?id='.$edit_id);
          $message = 'Votre question a bien été mise à jour !';
       }
    } else {
@@ -76,17 +75,14 @@ if(isset($_POST['Questions_Question'])) {
     ?>
    
    <div class="redaction">
-       <?php
-        $questions = $bdd->query('SELECT * FROM Questions');
-        while($q = $questions->fetch()) {
-        ?>
+   
       <form method="POST">
          <h1>Édition/Modification</h1>
          <textarea raws="100" cols= "52" name="Question_question" placeholder="<?php echo $q['Question']; ?>"><?php if($mode_edition == 1) { ?><?=$edit_question['Question'] ?><?php } ?></textarea><br />
          <input type="submit" value="Envoyer">
       </form>
       </div>
-      <?php } ?>
+    
       <br />
    <?php if(isset($message)) { echo $message; } ?>
 </body>

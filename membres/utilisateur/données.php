@@ -97,6 +97,9 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
             </table>
         </div>
         </div>
+
+        <a href="graphique.php">Graph</a>
+
         </body>
         </html>
         <?php
