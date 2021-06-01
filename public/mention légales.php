@@ -25,9 +25,7 @@
                 <p> Collecte de données à caractère personnel</p><br>
                 <p>
                     Witsmed, dans ses relations avec les Utilisateurs, va être amené à collecter et traiter des données à caractère personnel des Utilisateurs, lesquelles données lui auront été communiquées par ces derniers lors de leur inscription ou ultérieurement via son compte personnel sur le Site.
-
-                    La récolte et l’analyse de ces informations sont nécessaires pour permettre aux Utilisateurs d’accéder aux services proposés par Mercure Formation.
-
+                    La récolte et l’analyse de ces informations sont nécessaires pour permettre aux Utilisateurs d’accéder aux services proposés par Infinite Measures.
                     Sauf sur demande ou avec l’accord exprès de l’Utilisateur et dans le strict respect de ses directives, Witsmed ne procèdera à aucun autre traitement de données à caractère personnel autre que ceux décrits au sein des présentes mentions légales.
                 </p>
             </div>
