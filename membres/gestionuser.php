@@ -41,7 +41,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
     <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
 </a>
     <div id="titre" class="data-box" align="center">
-        <form method="" action="" class="form-container">
+        <form method="POST" action="" class="form-container">
             <table align = center>
                 <tr>
                     <td>
@@ -50,7 +50,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
                 </tr>
                 <tr>
                     <td>
-                        <form method="POST" class="form-container">
+                        <form action="" method="POST" class="form-container">
                             <input type="search" name="search" placeholder="Recherche..."/>
                             <input type="submit" value="valider"/>
                         </form>

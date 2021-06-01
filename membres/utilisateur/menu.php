@@ -56,7 +56,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         </tr>
         <tr>
             <td>
-                <button class="btn-menu">
+                <button id="contact" class="btn-menu">
                     <ion-icon name="mail" class="icon"></ion-icon><br/>
                     Administrateur
                 </button>
@@ -96,6 +96,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
     var btn_FAQ = document.getElementById('FAQ');
     btn_FAQ.addEventListener('click', function (){
         document.location.href = '<?php echo "../../public/FAQ.php?id=" .$_SESSION['id']; ?>'
+    })
+    var btn_contact = document.getElementById('contact');
+    btn_contact.addEventListener('click', function (){
+        document.location.href = '<?php echo "contact.php?id=" .$_SESSION['id']; ?>'
     })
 </script>
 </body>

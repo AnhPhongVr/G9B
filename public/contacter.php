@@ -1,3 +1,4 @@
+
 <form method="POST" class="form-container">
     <h1 align="center" style="color: white;">Envoyer un e-mail</h1>
     <table align="center">
@@ -35,11 +36,11 @@ if (isset($_POST['message'])) {
     if ($position_arobase === false)
         echo '<p>Votre email doit comporter un arobase.</p>';
     else {
-        $retour = mail('blalba@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
+        $retour = mail('williamphong77@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
         if($retour)
-            echo '<p>Votre message a été envoyé.</p>';
+            echo '<p style="color: white">Votre message a été envoyé.</p>';
         else
-            echo '<p>Erreur.</p>';
+            echo '<p style="color: white">Erreur.</p>';
     }
 }
 ?>
