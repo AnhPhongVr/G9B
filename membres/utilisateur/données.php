@@ -15,7 +15,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
         <!DOCTYPE html>
         <html lang="fr">
         <head>
-            <title>Profil</title>
+            <title>Données</title>
             <meta charset="utf-8">
 
             <!-- font google -->

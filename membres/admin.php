@@ -86,6 +86,10 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
             btn_logout.addEventListener('click', function (){
                 document.location.href = '<?php echo "deconnexion.php?id=" .$_SESSION['id']; ?>'
             })
+            var btn_gestion = document.getElementById('other');
+            btn_gestion.addEventListener('click', function (){
+                document.location.href = '<?php echo "gestionuser.php?id=" .$_SESSION['id']; ?>'
+            })
             var btn_FAQ = document.getElementById('FAQ');
             btn_FAQ.addEventListener('click', function (){
                 document.location.href = '<?php echo "../public/FAQ.php?id=" .$_SESSION['id']; ?>'
