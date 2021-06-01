@@ -78,7 +78,7 @@ if(isset($_POST['Question_question'])) {
    
       <form method="POST">
          <h1>Édition/Modification</h1>
-         <textarea raws="100" cols= "52" name="Question_question" placeholder="<?php echo $q['Question']; ?>"><?php if($mode_edition == 1) { ?><?=$edit_question['Question'] ?><?php } ?></textarea><br />
+         <textarea raws="100" cols= "52" name="Question_question" placeholder="Saisissez votre question"><?php if($mode_edition == 1) { ?><?=$edit_question['Question'] ?><?php } ?></textarea><br />
          <input type="submit" value="Envoyer">
       </form>
       </div>

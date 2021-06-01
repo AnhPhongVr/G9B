@@ -52,6 +52,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/navbar.css" rel="stylesheet">
     <link href="../css/popup.css" rel="stylesheet">
+    <link href="../css/accordion.css" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
     <title>FAQ</title>
@@ -87,33 +88,29 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
     ?>
 
     <!--<img src="../images/logo%20client%20détouré.png" class="logoClient" alt="logo client" id="logoClient">-->
+
+    
+<div class="question">
 <?php
-  $questions = $faq->query('SELECT * FROM faq.Questions ORDER BY id_Question ASC');
+  $questions = $faq->query('SELECT * FROM Questions JOIN Réponses ON Réponses.id_Question = Questions.id_Question ORDER BY id_Reponse');
   while($q = $questions->fetch()) {
   ?>
-  <div class="question">
+
     <b>N°<?php echo $q['id_Question']; ?> - <?php echo $q['Question']; ?></b><br>
-    <?php
-  $reponses = $faq->query('SELECT Reponse FROM faq.Réponses ORDER BY id_Reponse ASC');
-  while($r = $reponses->fetch()) {
-  ?>
-    <b><?php echo $r['Reponse']; ?></b><br>
-<?php } ?>
-    <a href="redaction.php?edit=<?= $q['id_Question'] ?>">Modifier</a>
-    <a href="supprimer.php?id=<?= $q['id_Question'] ?>">Supprimer</a>
-    <a href="" onclick="reponse('<?php echo $r['id_Reponse']; ?>');">Réponse</a>
-  </div>
+    <br>
+    <b><?php echo $q['Reponse']; ?></b><br>
+    <hr>
+    
+
 <?php } ?>
 
-<?php
-  $reponses = $faq->query('SELECT * FROM faq.Réponses ORDER BY id_Reponse ASC');
-  while($r = $reponses->fetch()) {
-  ?>
-  <div class="question" style="display: none;" id="<?php echo $r['id_Reponse']; ?>">
-    <b><?php echo $r['Reponse']; ?></b><br>
-  </div>
-<?php } ?>
+    <a href="redaction.php?edit=<?= $q['id_Question'] ?>">Modifier</a>
+    <a href="supprimer.php?id=<?= $q['id_Question'] ?>">Supprimer</a>
 </div>
+
+
+
+
 
 <!--<div class="pagination">
 <?php
