@@ -1,6 +1,4 @@
 <?php
-function idverif()
-{
     $bdd = new PDO('mysql:host=localhost;dbname=espace_membre; charset=utf8', 'root', 'root');
 
     if (isset($_GET['id']) and $_GET['id'] > 0) {
@@ -9,7 +7,5 @@ function idverif()
         $requser->execute(array($getid));
         $userinfo = $requser->fetch();
     }
-    return $userinfo;
-}
     ?>
 
