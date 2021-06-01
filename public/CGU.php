@@ -51,7 +51,7 @@
                 L’utilisateur, en utilisant notre solution prend la responsabilité de s’engager avec la société Witsmed dans un cadre pédagogique. Il accepte de soumettre ses informations personnelles pour l’analyse et l’interprétation des résultats.
             </p>
         </div>
-        <button class="accordion">Artcile 5-Force majeur</button>
+        <button class="accordion">Article 5-Force majeur</button>
         <div class="panel">
             <p>
                 La responsabilité de la société Witsmed  ne pourra être engagée en cas de force majeure ou de faits indépendants de sa volonté.
