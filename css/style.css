@@ -477,7 +477,6 @@ button:hover{
     color: white;
     padding: 14px 28px;
     font-size: 30px;
-    cursor: pointer;
     border-radius: 30px;
     margin: 20px;
     background-color: transparent;
@@ -515,4 +514,16 @@ button:hover{
 }
 .main{
     display: flex;
+}
+
+.user-box{
+    color: white;
+    padding: 14px 28px;
+    font-size: 30px;
+    border-radius: 30px;
+    margin: 10px 20px 10px 20px;
+    background-color: transparent;
+    text-align: center;
+    border: 5px solid white;
+    width: 60vw;
 }
