@@ -11,8 +11,7 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/navbar.css" rel="stylesheet">
-    <link href="../css/popup.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
     <title>G9Bwebpage</title>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
@@ -38,7 +37,7 @@ session_start();
                         <?php include ("../membres/connexion.php"); ?>
                     </div>
                     <div class="box-contact">
-                        <?php include ("contacter.php")?>
+                        <?php include("publicview/contacter.php") ?>
                     </div>
                     <div class="box-about">
                         <h1 align="center" style="color: white;">A propos</h1>
@@ -48,7 +47,7 @@ session_start();
                         </p>
                     </div>
                     <div class="box-logo">
-                        <?php include ("svganimation.php"); ?>
+                        <?php include("publicview/svganimation.php"); ?>
                     </div>
                 </td>
             </tr>
@@ -80,9 +79,8 @@ session_start();
     </div>
 
     <!-- pied de page -->
-    <?php include("footer.php") ?>
+    <?php include('publicview/footer.php') ?>
     <script src="../js/svganimation.js"></script>
-    <script src="../js/popup.js"></script>
     <script>
         var btn_FAQ = document.getElementById('FAQ');
         btn_FAQ.addEventListener('click', function (){
