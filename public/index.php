@@ -43,7 +43,8 @@ session_start();
                     <div class="box-about">
                         <h1 align="center" style="color: white;">A propos</h1>
                         <p style="color:white;">
-                            s nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.
+                            Site web de la socièté Wistmed, afin d’offrir aux clients de notre manchon un suivi de leurs données des différents tests psychotechniques. Ce site permet aux clients de s'authentifier, afin de consulter les données des différents test psychotechniques qu'ils ont effectué.
+                            Ce site permet également aux médecins de s'authentifier afin qu'ils puissent inscrire de nouveaux utilisateurs.
                         </p>
                     </div>
                     <div class="box-logo">
