@@ -20,7 +20,7 @@
 
     <div class="accordion-content">
         <div style="border-radius: .25rem;">
-            <button class="accordion">Section 1</button>
+            <button class="accordion">Article 1 Collecte de données à caractère personnel </button>
             <div class="panel">
                 <p> Collecte de données à caractère personnel</p><br>
                 <p>
@@ -30,7 +30,7 @@
                 </p>
             </div>
 
-            <button class="accordion">Section 2</button>
+            <button class="accordion">Article 2 Finalités du traitement</button>
             <div class="panel">
                 <p> Finalités du traitement</p><br>
                 <p>
@@ -41,7 +41,7 @@
                     et toute autre utilisation qui permet d’améliorer le fonctionnement du Site.
                 </p>
             </div>
-            <button class="accordion">Section 3</button>
+            <button class="accordion">Article 3 Divulgation des données</button>
             <div class="panel">
                 <p>Divulgation des données </p><br>
                 <p>
@@ -50,7 +50,7 @@
 
                 </p>
             </div>
-            <button class="accordion">Section 4</button>
+            <button class="accordion">Article 4 Droit d'accès, de modification et de suppression des données</button>
             <div class ="panel">
                 <p>Droits d’accès, de modification et de suppression des données</p><br>
                 <p>
