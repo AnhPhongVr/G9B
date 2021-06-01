@@ -9,7 +9,7 @@ include ('/publicmodel/modelhomelink.php');
 require '/publicmodel/modelhomelink.php';
 try
 {
-    $req = idverif();
+    $userinfo = idverif();
     // View
     require 'publicview/viewmention.php';
 }
