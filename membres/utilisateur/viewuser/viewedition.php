@@ -97,7 +97,7 @@
                 </table>
                 <input class="btn" type="submit" value="Mettre à jour mon profil !"/>
             </form>
-            <img class="logoUtilisateur" src="../../images/Jean.png" alt="logo utilisateur">
+        
             <?php if(isset($msg)) { echo $msg; } ?>
         </div>
     </div>
