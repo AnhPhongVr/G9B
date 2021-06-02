@@ -88,6 +88,7 @@
             <div class="panel">
                 <p>En naviguant sur le site, l'utilisateur atteste avoir lu et compris la présente politique de confidentialité et en accepte les conditions, en ce qui concerne plus particulièrement la collecte et le traitement de ses données à caractère personnel.</p>
             </div>
+        </div>
     </div>
     <!-- pied de page -->
     <?php include("publicview/footer.php") ?>
