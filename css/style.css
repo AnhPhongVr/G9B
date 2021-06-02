@@ -360,6 +360,17 @@ li{
     height: 10vh;
     color: white;
     margin-right: 20px;
+    margin-left: 15px;
+}
+
+/*style pour le bouton deconnexion dans les icones*/
+
+.deconnexion{
+    width: 10vh;
+    height: 10vh;
+    color: white;
+    margin-right: 20px;
+    margin-left: 28px;
 }
 
 .data-box{

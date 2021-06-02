@@ -23,32 +23,32 @@
                 <tr>
                     <td>
                         <button id="profil" class="btn-admin">
-                            <ion-icon name="id-card" class="icon-admin"></ion-icon>
+                            <ion-icon name="id-card" class="icon-admin"></ion-icon><br>
                             Profil
                         </button>
                     </td>
                     <td>
                         <button id="other" class="btn-admin">
-                            <ion-icon name="people" class="icon-admin"></ion-icon>
+                            <ion-icon name="people" class="icon-admin"></ion-icon><br>
                             Gérer un utilisateur
                         </button>
                     </td>
                     <td rowspan="2" colspan="2">
                         <div class="msg">
-                            <p class ="titre_message"> Nouveau(x) message(s): </p>
+                            <p class ="titre_message"> Nouveau(x) message(s): </p><br>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <button id="sign" class="btn-admin">
-                            <ion-icon name="add" class="icon-admin"></ion-icon>
+                            <ion-icon name="add" class="icon-admin"></ion-icon><br>
                             Inscrire un utilisateur
                         </button>
                     </td>
                     <td>
                         <button id="FAQ" class="btn-admin">
-                            <ion-icon name="help" class="icon-admin"></ion-icon>
+                            <ion-icon name="help" class="icon-admin"></ion-icon><br>
                             FAQ
                         </button>
                     </td>
@@ -56,7 +56,7 @@
                 <tr>
                     <td>
                         <button id="logout" class="btn-admin">
-                            <ion-icon name="log-out-outline" class="icon-admin"></ion-icon>
+                            <ion-icon name="log-out-outline" class="deconnexion"></ion-icon><br>
                             Déconnexion
                         </button>
                     </td>
