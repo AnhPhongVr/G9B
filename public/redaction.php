@@ -29,6 +29,14 @@ if(isset($_POST['Question_question'])) {
       $message = 'Veuillez remplir le champ';
    }
 }
+$bdd = new PDO('mysql:host=localhost;dbname=espace_membre; charset=utf8', 'root', 'root');
+
+if(isset($_GET['id']) AND $_GET['id'] > 0) {
+$getid = intval($_GET['id']);
+$requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");
+$requser->execute(array($getid));
+$userinfo = $requser->fetch();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -48,31 +56,10 @@ if(isset($_POST['Question_question'])) {
 </head>
 <body>
 
-   <?php
-    if (isset($_SESSION['usertype']) AND $userinfo['usertype'] == 'admin'){
-        ?>
-        <a  class="accueil" href="<?php echo "../membres/admin.php?id=" .$_SESSION['id'];?>">
+        <a  class="accueil" href="<?php echo "FAQ.php?id=" .$_SESSION['id'];?>">
             <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
             <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
         </a>
-        <?php
-    }
-    else if (isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
-    {
-        ?>
-        <a  class="accueil" href="<?php echo "../membres/utilisateur/menu.php?id=" .$_SESSION['id'];?>">
-            <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
-            <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
-        </a>
-        <?php
-    } else { ?>
-        <a  class="accueil" href="index.php">
-        <ion-icon name="home" style="color:white; width:50px; height:50px;"></ion-icon>
-        <!-- <img src="../images/Infinite measure détouré intérieur blanc.png" alt="logoClient" width="50px" height="50px"> -->
-        </a>
-    <?php
-    }
-    ?>
    
    <div class="redaction">
    
@@ -86,4 +73,4 @@ if(isset($_POST['Question_question'])) {
       <br />
    <?php if(isset($message)) { echo $message; } ?>
 </body>
-</html>
+</html> <?php } ?>
