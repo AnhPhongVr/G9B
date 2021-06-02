@@ -1,4 +1,5 @@
 <?php
+session_start();
 $faq = new PDO("mysql:host=localhost;dbname=FAQ;charset=utf8", "root", "root");
 $mode_edition = 0;
 if(isset($_GET['id_Question']) AND !empty($_GET['id_Question'])) {
@@ -64,7 +65,7 @@ $userinfo = $requser->fetch();
    <div class="redaction">
    
       <form method="POST">
-         <h1>Édition/Modification</h1>
+         <h1>Ajout</h1>
          <textarea raws="100" cols= "52" name="Question_question" placeholder="Saisissez votre question"><?php if($mode_edition == 1) { ?><?=$edit_question['Question'] ?><?php } ?></textarea><br />
          <input type="submit" value="Envoyer">
       </form>

@@ -6,10 +6,17 @@ $bdd = new PDO('mysql:host=localhost;dbname=espace_membre; charset=utf8', 'root'
 $faq = new PDO("mysql:host=localhost;dbname=FAQ;charset=utf8", "root", "root");
 
 if(isset($_GET['id']) AND $_GET['id'] > 0) {
+    if(isset($_GET['suprime']) AND !empty($_GET['suprime'])) {
+        $suppr_id = (int)$_GET['suprime'];
+        $suppr = $faq->prepare('DELETE FROM Questions WHERE id_Question = ?');
+        $suppr->execute(array($suppr_id));
+    }
+    $questions = $faq->query('SELECT * FROM Questions JOIN Réponses ON Réponses.id_Question = Questions.id_Question ORDER BY id_Reponse');
     $getid = intval($_GET['id']);
     $requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");
     $requser->execute(array($getid));
     $userinfo = $requser->fetch();
+
 
 
 ?>
@@ -58,7 +65,6 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
 <div class="question">
 <?php
 
-  $questions = $faq->query('SELECT * FROM Questions JOIN Réponses ON Réponses.id_Question = Questions.id_Question ORDER BY id_Reponse');
   while($q = $questions->fetch()) {
   ?>
 
@@ -70,7 +76,7 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
       if (isset($_SESSION['usertype']) AND $userinfo['usertype'] === 'admin'){
           ?>
           <a href="redaction.php?edit=<?= $q['id_Question'] ?>&id=<?= $_SESSION['id'] ?>">Modifier</a>
-          <a href="supprimer.php?supprime=<?= $q['id_Question'] ?>&id=<?= $_SESSION['id'] ?>">Supprimer</a>
+          <a href="FAQ.php?supprime=<?= $q['id_Question'] ?>&id=<?= $_SESSION['id'] ?>">Supprimer</a>
       <?php } ?>
     <hr>
 <?php }?>
@@ -106,7 +112,6 @@ if(isset($_GET['id']) AND $_GET['id'] > 0) {
   $questions = $faq->query('SELECT * FROM Questions JOIN Réponses ON Réponses.id_Question = Questions.id_Question ORDER BY id_Reponse');
   while($q = $questions->fetch()) {
   ?>
-
       <b>N°<?php echo $q['id_Question']; ?> - <?php echo $q['Question']; ?></b><br>
       <br>
       <b><?php echo $q['Reponse']; ?></b><br>
