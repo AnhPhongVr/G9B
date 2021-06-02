@@ -61,9 +61,7 @@
             <div class="panel">
                 <p>
                     Les données à caractère personnel collectées par Infinite Measures sont traitées pour les finalités suivantes :
-                    permettre l’accès aux services de formation au permis de conduire qu’elle propose ;
-                    permettre l’utilisation des services de formation au permis de conduire qu’elle propose ;
-                    permettre aux Utilisateurs de candidater aux offres d’emploi qu’elle propose ;
+                    permettre l’utilisation des services qu’elle propose ;
                     et toute autre utilisation qui permet d’améliorer le fonctionnement du Site.
                 </p>
             </div>
@@ -72,7 +70,6 @@
                 <p>
                     ISEP s’engage à garantir le respect de la vie privée des internautes qui visitent ce site web et à veiller dans les limites de l’état de l’art à la confidentialité des informations personnelles qui lui sont transmises.
                     Les destinataires des données sont  ISEP et ses collaborateurs uniquement.
-
                 </p>
             </div>
             <button class="accordion">Article 4-Droit d'accès, de modification et de suppression des données</button>
