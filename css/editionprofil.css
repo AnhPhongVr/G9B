@@ -6,7 +6,7 @@
 }
 
 h2{
-	margin-left: 600px;
+	margin-left: 650px;
 	color: white;
 	font-family: "Merriweather Sans", serif;
 	margin-top: 50px;
@@ -14,7 +14,7 @@ h2{
 
 table{
 	border-collapse: collapse;
-	margin-left: 100px;
+	margin-left: 250px;
 	margin-top: 50px;
 }
 
@@ -25,7 +25,7 @@ td{
 }
 
 .btn{
-	margin-left: 150px;
+	margin-left: 300px;
 	margin-top: 20px;
 	color: white;
 	border-color: white;
