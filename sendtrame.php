@@ -7,8 +7,10 @@ function create_trame() {
     $req = "1";
     $typ = "3";
     $num = "01";
-    $ans = "0001";
-    return $tra . $obj . $req . $typ . $num . $ans;
+    $ans = "0000";
+    $short = $tra . $obj . $req . $typ . $num . $ans;
+    $trame = $short . createChk($short);
+    return $trame;
 }
 
 function createChk($short_trame){
@@ -24,6 +26,7 @@ function createChk($short_trame){
 
 function sendTrame($trame){
     $url = SEND . $trame;
+    echo $url . "<br />";
     /* die(header('Location: ' . $url)); */
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -33,9 +36,5 @@ function sendTrame($trame){
     curl_close($ch);
 }
 
-$short_trame = create_trame();
-$trame = $short_trame . createChk($short_trame);
-sendTrame($trame);
 
-echo $short_trame . "<br />";
-echo $trame;
+sendTrame(create_trame());
